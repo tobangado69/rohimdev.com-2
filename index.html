@@ -121,6 +121,9 @@
 </head>
 
 <body class="min-h-full overflow-x-hidden text-white bg-black">
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <!-- Navigation -->
   <header class="fixed top-4 left-4 right-4 z-50 fade-in">
     <div class="max-w-7xl mx-auto">
@@ -215,8 +218,8 @@
   </div>
 
   <!-- Main Content -->
-  <main class="pt-20"> <!-- Hero Section -->
-    <section class="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">`
+  <main id="main-content" class="pt-20"> <!-- Hero Section -->
+    <section class="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden" role="banner" aria-label="Hero section">`
       <div class="hero-haze"></div>
       <div class="hero-saber"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -276,7 +279,7 @@
                 class="w-80 h-80 mx-auto rounded-3xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/10 p-1 shadow-2xl premium-card">
                 <div class="w-full h-full rounded-3xl bg-gray-100 flex items-center justify-center overflow-hidden">
                   <!-- Professional Profile Image -->
-                  <img src="assets/images/profile.png" alt="Abdul Rohim - Full-Stack Developer"
+                  <img src="assets/images/profile.png" alt="Abdul Rohim - Full-Stack Developer and Infrastructure Specialist professional headshot"
                     class="w-full h-full object-cover rounded-3xl" style="object-position: center top;"
                     loading="lazy" />
                 </div>
@@ -304,7 +307,7 @@
       </div>
     </section>
     <!-- Professional Experience -->
-    <section class="py-32 bg-gradient-to-b from-secondary to-primary">
+    <section class="py-32 bg-gradient-to-b from-secondary to-primary" role="region" aria-label="Work experience">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
           <div
@@ -415,7 +418,7 @@
     </section>
 
     <!-- Featured Projects Preview -->
-    <section class="py-32 bg-gradient-to-b from-black to-gray-900">
+    <section class="py-32 bg-gradient-to-b from-black to-gray-900" role="region" aria-label="Featured projects">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
           <div
@@ -512,7 +515,7 @@
     </section>
 
     <!-- Services Overview -->
-    <section class="py-32 bg-gradient-to-b from-gray-900 to-black">
+    <section class="py-32 bg-gradient-to-b from-gray-900 to-black" role="region" aria-label="Services offered">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-20">
           <div
@@ -624,7 +627,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-32 bg-gradient-to-b from-black to-gray-900">
+    <section class="py-32 bg-gradient-to-b from-black to-gray-900" role="region" aria-label="Contact information">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div
           class="slide-up stagger-1 inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-full mb-8">

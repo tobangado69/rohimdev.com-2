@@ -124,6 +124,9 @@
 </head>
 
 <body class="min-h-full overflow-x-hidden text-white bg-black transition-colors duration-300" data-theme="dark">
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
     <header class="fixed top-4 left-4 right-4 z-50 fade-in">
         <div class="max-w-7xl mx-auto">
@@ -222,7 +225,7 @@
     </div>
 
     <!-- Main Content -->
-    <main class="pt-16">
+    <main id="main-content" class="pt-16">
         <!-- Hero Section -->
         <section class="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
             <div class="hero-haze"></div>
@@ -1095,10 +1098,10 @@
     <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>
     <script>
-      // Set active page indicator for services page
-      document.addEventListener("DOMContentLoaded", function () {
-        setActivePageIndicator();
-      });
+        // Set active page indicator for services page
+        document.addEventListener("DOMContentLoaded", function () {
+            setActivePageIndicator();
+        });
     </script>
 </body>
 

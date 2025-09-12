@@ -26,11 +26,51 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Focus styles for accessibility */
+/* Enhanced focus styles for accessibility - WCAG AA Compliant */
 a:focus,
-button:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+  border-radius: 4px;
+}
+
+/* Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast text for better readability */
+.high-contrast-text {
+  color: var(--text);
+}
+
+.high-contrast-muted {
+  color: var(--muted);
+}
+
+/* Error and success states with proper contrast */
+.error-text {
+  color: var(--error-text);
+}
+
+.success-text {
+  color: var(--success-text);
 }
 
 /* Custom utilities */
@@ -38,13 +78,13 @@ button:focus {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Theming via CSS variables (dark default) */
+/* Theming via CSS variables (dark default) - WCAG AA Compliant */
 :root {
   --bg: #0b0b0c;
   --bg-elev: #12161c;
   --card: #1b1f27;
   --card-2: #232937;
-  --border: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12); /* Improved contrast */
   --primary: #6366f1; /* brand-500 - main accent */
   --primary-600: #4f46e5;
   --primary-700: #4338ca;
@@ -53,10 +93,16 @@ button:focus {
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.65);
+  --text: rgba(255, 255, 255, 0.95); /* Improved contrast for main text */
+  --muted: rgba(255, 255, 255, 0.75); /* Improved contrast for secondary text */
   --surface: rgba(255, 255, 255, 0.05);
   --surface-hover: rgba(255, 255, 255, 0.08);
+  
+  /* Accessibility improvements */
+  --focus-ring: #3b82f6; /* High contrast focus ring */
+  --focus-ring-offset: 2px;
+  --error-text: #fca5a5; /* High contrast error text */
+  --success-text: #86efac; /* High contrast success text */
 }
 
 .bg-card {
