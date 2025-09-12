@@ -571,7 +571,7 @@ function initContactForm() {
     if (!email) {
       showFieldError("email", "Email is required");
       isValid = false;
-    } else if (!isValidEmail(email)) {
+    } else if (!validateEmail(email)) {
       showFieldError("email", "Please enter a valid email address");
       isValid = false;
     }
