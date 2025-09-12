@@ -1,5 +1,22 @@
 /* Custom CSS for enhanced styling */
 
+/* CSS Reset and Normalize for better browser compatibility */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Custom animations */
 @keyframes fadeInUp {
   from {
@@ -78,6 +95,73 @@ select:focus {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Browser compatibility fallbacks */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Grid fallbacks for older browsers */
+.grid {
+  display: -ms-grid; /* IE 10-11 */
+  display: grid;
+}
+
+.grid-cols-2 {
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-cols-3 {
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-cols-4 {
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Flexbox fallbacks */
+.flex {
+  display: -webkit-box; /* Safari 6.1+ */
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+}
+
+.flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.justify-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 /* Theming via CSS variables (dark default) - WCAG AA Compliant */
 :root {
   --bg: #0b0b0c;
@@ -97,7 +181,7 @@ select:focus {
   --muted: rgba(255, 255, 255, 0.75); /* Improved contrast for secondary text */
   --surface: rgba(255, 255, 255, 0.05);
   --surface-hover: rgba(255, 255, 255, 0.08);
-  
+
   /* Accessibility improvements */
   --focus-ring: #3b82f6; /* High contrast focus ring */
   --focus-ring-offset: 2px;

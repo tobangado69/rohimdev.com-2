@@ -1,26 +1,261 @@
 // Main JavaScript file for portfolio website
 
+// Browser compatibility polyfills and error handling
+
+// Console fallback for older browsers
+if (!window.console) {
+  window.console = {
+    log: function() {},
+    error: function() {},
+    warn: function() {},
+    info: function() {}
+  };
+}
+
+// Error handling wrapper
+function safeExecute(fn, context) {
+  try {
+    return fn.call(context);
+  } catch (error) {
+    console.error('Error executing function:', error);
+    return null;
+  }
+}
+
+// Browser and feature detection
+function detectBrowser() {
+  const userAgent = navigator.userAgent;
+  const isIE = /MSIE|Trident/.test(userAgent);
+  const isSafari = /Safari/.test(userAgent) && !/Chrome/.test(userAgent);
+  const isFirefox = /Firefox/.test(userAgent);
+  const isChrome = /Chrome/.test(userAgent) && !/Edge/.test(userAgent);
+  
+  return {
+    isIE,
+    isSafari,
+    isFirefox,
+    isChrome,
+    userAgent
+  };
+}
+
+// Feature detection
+function detectFeatures() {
+  return {
+    hasIntersectionObserver: 'IntersectionObserver' in window,
+    hasRequestAnimationFrame: 'requestAnimationFrame' in window,
+    hasFetch: 'fetch' in window,
+    hasLocalStorage: 'localStorage' in window,
+    hasSessionStorage: 'sessionStorage' in window,
+    hasWebGL: !!window.WebGLRenderingContext,
+    hasWebP: (function() {
+      const canvas = document.createElement('canvas');
+      return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    })()
+  };
+}
+
+// Log browser info for debugging (only in development)
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  console.log('Browser Info:', detectBrowser());
+  console.log('Feature Support:', detectFeatures());
+  
+  // Add testing utilities to window for manual testing
+  window.portfolioTesting = {
+    testMobileMenu: function() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      if (btn && menu) {
+        console.log('Testing mobile menu...');
+        btn.click();
+        setTimeout(() => {
+          console.log('Mobile menu visible:', !menu.classList.contains('hidden'));
+          btn.click();
+          console.log('Mobile menu closed');
+        }, 1000);
+      } else {
+        console.error('Mobile menu elements not found');
+      }
+    },
+    
+    testContactForm: function() {
+      const form = document.getElementById('contact-form');
+      if (form) {
+        console.log('Testing contact form validation...');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        
+        // Test empty validation
+        form.dispatchEvent(new Event('submit'));
+        console.log('Empty form validation test completed');
+        
+        // Test with valid data
+        if (nameInput) nameInput.value = 'Test User';
+        if (emailInput) emailInput.value = 'test@example.com';
+        if (messageInput) messageInput.value = 'Test message';
+        
+        console.log('Form filled with test data');
+      } else {
+        console.error('Contact form not found');
+      }
+    },
+    
+    testNavigation: function() {
+      const navLinks = document.querySelectorAll('nav a[href]');
+      console.log('Found navigation links:', navLinks.length);
+      navLinks.forEach((link, index) => {
+        console.log(`${index + 1}. ${link.textContent.trim()} -> ${link.href}`);
+      });
+    },
+    
+    testResponsiveDesign: function() {
+      const viewport = {
+        width: window.innerWidth,
+        height: window.innerHeight,
+        devicePixelRatio: window.devicePixelRatio
+      };
+      
+      console.log('Current viewport:', viewport);
+      
+      // Test different breakpoints
+      const breakpoints = {
+        mobile: 640,
+        tablet: 768,
+        desktop: 1024,
+        large: 1280
+      };
+      
+      const currentBreakpoint = Object.keys(breakpoints).find(
+        bp => viewport.width >= breakpoints[bp]
+      ) || 'mobile';
+      
+      console.log('Current breakpoint:', currentBreakpoint);
+      
+      // Check if mobile menu should be visible
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      
+      if (viewport.width < 768) {
+        console.log('Mobile layout detected - mobile menu should be available');
+        if (mobileMenuBtn) {
+          console.log('Mobile menu button found:', mobileMenuBtn.offsetWidth + 'x' + mobileMenuBtn.offsetHeight);
+        }
+      } else {
+        console.log('Desktop layout detected - mobile menu should be hidden');
+      }
+    },
+    
+    testFormValidation: function() {
+      const form = document.getElementById('contact-form');
+      if (!form) {
+        console.error('Contact form not found');
+        return;
+      }
+      
+      console.log('Testing form validation...');
+      
+      // Test required field validation
+      const requiredFields = ['name', 'email', 'message'];
+      requiredFields.forEach(fieldName => {
+        const field = document.getElementById(fieldName);
+        if (field) {
+          field.value = '';
+          field.dispatchEvent(new Event('blur'));
+          console.log(`${fieldName} validation test completed`);
+        }
+      });
+      
+      // Test email validation
+      const emailField = document.getElementById('email');
+      if (emailField) {
+        const testEmails = [
+          'invalid-email',
+          'test@',
+          '@example.com',
+          'test@example.com'
+        ];
+        
+        testEmails.forEach(email => {
+          emailField.value = email;
+          emailField.dispatchEvent(new Event('blur'));
+          console.log(`Email validation test for "${email}" completed`);
+        });
+      }
+    },
+    
+    runAllTests: function() {
+      console.log('Running all portfolio tests...');
+      this.testMobileMenu();
+      this.testContactForm();
+      this.testNavigation();
+      this.testResponsiveDesign();
+      this.testFormValidation();
+      console.log('All tests completed. Check console for results.');
+    }
+  };
+  
+  console.log('Testing utilities available at window.portfolioTesting');
+}
+
+if (!window.requestAnimationFrame) {
+  window.requestAnimationFrame = function(callback) {
+    return setTimeout(callback, 1000 / 60);
+  };
+}
+
+if (!window.IntersectionObserver) {
+  // Simple fallback for IntersectionObserver
+  window.IntersectionObserver = function(callback) {
+    return {
+      observe: function() {},
+      unobserve: function() {},
+      disconnect: function() {}
+    };
+  };
+}
+
+// Fetch polyfill for older browsers
+if (!window.fetch) {
+  window.fetch = function(url, options) {
+    return new Promise(function(resolve, reject) {
+      var xhr = new XMLHttpRequest();
+      xhr.open(options.method || 'GET', url);
+      
+      if (options.headers) {
+        Object.keys(options.headers).forEach(function(key) {
+          xhr.setRequestHeader(key, options.headers[key]);
+        });
+      }
+      
+      xhr.onload = function() {
+        resolve({
+          ok: xhr.status >= 200 && xhr.status < 300,
+          status: xhr.status,
+          json: function() {
+            return Promise.resolve(JSON.parse(xhr.responseText));
+          }
+        });
+      };
+      
+      xhr.onerror = function() {
+        reject(new Error('Network error'));
+      };
+      
+      xhr.send(options.body);
+    });
+  };
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  // Mobile menu functionality
-  initMobileMenu();
-
-  // Smooth scrolling for anchor links
-  initSmoothScrolling();
-
-  // Add scroll effects
-  initScrollEffects();
-
-  // Initialize animations
-  initAnimations();
-
-  // Performance monitoring
-  initPerformanceMonitoring();
-
-  // Back to top button
-  initBackToTop();
-
-  // Set active page indicator
-  setActivePageIndicator();
+  // Initialize all features with error handling
+  safeExecute(initMobileMenu);
+  safeExecute(initSmoothScrolling);
+  safeExecute(initScrollEffects);
+  safeExecute(initAnimations);
+  safeExecute(initPerformanceMonitoring);
+  safeExecute(initBackToTop);
+  safeExecute(setActivePageIndicator);
 });
 
 /**
@@ -219,27 +454,54 @@ function initBackToTop() {
  * Initialize performance monitoring
  */
 function initPerformanceMonitoring() {
-  // Monitor Core Web Vitals
-  if ("web-vital" in window) {
-    // This would integrate with web-vitals library if included
-    // For now, we'll just log basic performance metrics
-    window.addEventListener("load", function () {
-      setTimeout(function () {
-        const perfData = performance.getEntriesByType("navigation")[0];
-        console.log(
-          "Page Load Time:",
-          perfData.loadEventEnd - perfData.loadEventStart,
-          "ms"
-        );
-        console.log(
-          "DOM Content Loaded:",
-          perfData.domContentLoadedEventEnd -
-            perfData.domContentLoadedEventStart,
-          "ms"
-        );
-      }, 0);
-    });
-  }
+  // Enhanced performance monitoring for browser testing
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      const perfData = performance.getEntriesByType("navigation")[0];
+      const browserInfo = detectBrowser();
+      const features = detectFeatures();
+      
+      // Performance metrics
+      const metrics = {
+        pageLoadTime: perfData.loadEventEnd - perfData.loadEventStart,
+        domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+        firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 'N/A',
+        firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 'N/A',
+        browser: browserInfo,
+        features: features,
+        viewport: {
+          width: window.innerWidth,
+          height: window.innerHeight,
+          devicePixelRatio: window.devicePixelRatio
+        }
+      };
+      
+      console.log('Performance Metrics:', metrics);
+      
+      // Store metrics for debugging
+      if (features.hasLocalStorage) {
+        try {
+          localStorage.setItem('portfolio_performance', JSON.stringify(metrics));
+        } catch (e) {
+          console.warn('Could not store performance metrics:', e);
+        }
+      }
+      
+      // Check for potential issues
+      if (metrics.pageLoadTime > 3000) {
+        console.warn('Slow page load detected:', metrics.pageLoadTime + 'ms');
+      }
+      
+      if (browserInfo.isIE) {
+        console.warn('Internet Explorer detected - some features may not work optimally');
+      }
+      
+      if (!features.hasIntersectionObserver) {
+        console.warn('IntersectionObserver not supported - animations may be limited');
+      }
+      
+    }, 1000);
+  });
 }
 
 /**
