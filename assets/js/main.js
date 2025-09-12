@@ -26,31 +26,31 @@ document.addEventListener("DOMContentLoaded", function () {
 function initMobileMenu() {
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuClose = document.getElementById("mobile-menu-close");
 
   if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener("click", function () {
+    // Toggle mobile menu
+    function toggleMobileMenu() {
       const isHidden = mobileMenu.classList.contains("hidden");
 
       if (isHidden) {
         mobileMenu.classList.remove("hidden");
         mobileMenuBtn.setAttribute("aria-expanded", "true");
-        // Change icon to X
-        mobileMenuBtn.innerHTML = `
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                `;
+        document.body.style.overflow = "hidden"; // Prevent background scrolling
       } else {
         mobileMenu.classList.add("hidden");
         mobileMenuBtn.setAttribute("aria-expanded", "false");
-        // Change icon back to hamburger
-        mobileMenuBtn.innerHTML = `
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                `;
+        document.body.style.overflow = "auto"; // Restore scrolling
       }
-    });
+    }
+
+    // Open mobile menu
+    mobileMenuBtn.addEventListener("click", toggleMobileMenu);
+
+    // Close mobile menu
+    if (mobileMenuClose) {
+      mobileMenuClose.addEventListener("click", toggleMobileMenu);
+    }
 
     // Close mobile menu when clicking outside
     document.addEventListener("click", function (event) {
@@ -58,13 +58,9 @@ function initMobileMenu() {
         !mobileMenuBtn.contains(event.target) &&
         !mobileMenu.contains(event.target)
       ) {
-        mobileMenu.classList.add("hidden");
-        mobileMenuBtn.setAttribute("aria-expanded", "false");
-        mobileMenuBtn.innerHTML = `
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                `;
+        if (!mobileMenu.classList.contains("hidden")) {
+          toggleMobileMenu();
+        }
       }
     });
 
@@ -72,14 +68,17 @@ function initMobileMenu() {
     const mobileLinks = mobileMenu.querySelectorAll("a");
     mobileLinks.forEach((link) => {
       link.addEventListener("click", function () {
-        mobileMenu.classList.add("hidden");
-        mobileMenuBtn.setAttribute("aria-expanded", "false");
-        mobileMenuBtn.innerHTML = `
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                `;
+        if (!mobileMenu.classList.contains("hidden")) {
+          toggleMobileMenu();
+        }
       });
+    });
+
+    // Close mobile menu with Escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+        toggleMobileMenu();
+      }
     });
   }
 }
