@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Back to top button
   initBackToTop();
+
+  // Set active page indicator
+  setActivePageIndicator();
 });
 
 /**
@@ -744,3 +747,40 @@ function initContactForm() {
 document.addEventListener("DOMContentLoaded", function () {
   initContactForm();
 });
+
+/**
+ * Set active page indicator in navigation
+ */
+function setActivePageIndicator() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll("nav a[href]");
+
+  navLinks.forEach((link) => {
+    const linkPath = link.getAttribute("href");
+
+    // Remove existing active classes
+    link.classList.remove(
+      "text-white",
+      "font-semibold",
+      "text-primary",
+      "bg-white/10"
+    );
+    link.classList.add("text-white/70", "hover:text-white");
+
+    // Check if this link matches current page
+    if (
+      currentPath === linkPath ||
+      (currentPath === "/" && linkPath === "/") ||
+      (currentPath.includes(linkPath) && linkPath !== "/")
+    ) {
+      // Add active classes
+      link.classList.remove("text-white/70", "hover:text-white");
+      link.classList.add("text-white", "font-semibold");
+
+      // For mobile menu, add background highlight
+      if (link.closest("#mobile-menu")) {
+        link.classList.add("bg-white/10");
+      }
+    }
+  });
+}

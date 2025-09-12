@@ -132,7 +132,8 @@
           </a>
         </div>
 
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-primary" aria-label="Toggle mobile menu" aria-expanded="false">
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-primary" aria-label="Toggle mobile menu"
+          aria-expanded="false">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -147,7 +148,8 @@
       <!-- Mobile menu header -->
       <div class="flex items-center justify-between p-4 border-b border-white/10">
         <a href="/" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
-          <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <div
+            class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
               data-lucide="hexagon" class="lucide lucide-hexagon h-4 w-4 text-white">
@@ -164,20 +166,27 @@
           </svg>
         </button>
       </div>
-      
+
       <!-- Mobile menu navigation -->
       <nav class="flex-1 px-4 py-6 space-y-4">
-        <a href="/" class="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Home</a>
+        <a href="/"
+          class="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Home</a>
         <a href="/about" class="block px-4 py-3 text-white font-semibold bg-white/10 rounded-lg">About</a>
-        <a href="/work" class="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Work</a>
-        <a href="/projects" class="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Projects</a>
-        <a href="/services" class="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Services</a>
+        <a href="/work"
+          class="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Work</a>
+        <a href="/projects"
+          class="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Projects</a>
+        <a href="/services"
+          class="block px-4 py-3 text-white/70 hover:text-white hover:bg-white/5 rounded-lg transition-colors">Services</a>
       </nav>
-      
+
       <!-- Mobile menu footer -->
       <div class="p-4 border-t border-white/10 space-y-3">
-        <a href="/contact" class="block w-full px-4 py-3 text-center text-white/70 hover:text-white transition-colors">Contact</a>
-        <a href="/contact" class="block w-full px-4 py-3 text-center btn-primary rounded-lg transition-all transform hover:scale-105">Get Started</a>
+        <a href="/contact"
+          class="block w-full px-4 py-3 text-center text-white/70 hover:text-white transition-colors">Contact</a>
+        <a href="/contact"
+          class="block w-full px-4 py-3 text-center btn-primary rounded-lg transition-all transform hover:scale-105">Get
+          Started</a>
       </div>
     </div>
   </div>
@@ -926,6 +935,12 @@
   <!-- JavaScript -->
   <!-- Mobile menu, smooth scrolling, and animations moved to /assets/js/main.js -->
   <script src="/assets/js/main.js"></script>
+  <script>
+    // Set active page indicator for about page
+    document.addEventListener("DOMContentLoaded", function () {
+      setActivePageIndicator();
+    });
+  </script>
 </body>
 
 </html>
