@@ -173,9 +173,7 @@
 
 ## 🔧 Technical Implementation
 ### Performance Optimization
-- [ ] Optimize images (WebP format)
 - [ ] Minify CSS and JavaScript
-- [ ] Implement lazy loading for images
 - [x] Add meta tags for SEO
 - [ ] Test loading speeds
 
