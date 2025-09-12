@@ -1,0 +1,31 @@
+---
+alwaysApply: true
+---
+
+# Portfolio Website Project Structure
+
+This is a static portfolio website built with HTML, JavaScript, and Tailwind CSS CDN.
+
+## File Structure
+- [index.html](mdc:index.html) - Main homepage
+- [about.html](mdc:about.html) - About page
+- [projects.html](mdc:projects.html) - Projects showcase
+- [services.html](mdc:services.html) - Services offered
+- [contact.html](mdc:contact.html) - Contact page and form
+- [assets/](mdc:assets/) - Static assets directory
+  - [css/](mdc:assets/css/) - Custom CSS files
+  - [js/](mdc:assets/js/) - JavaScript files
+  - [images/](mdc:assets/images/) - Image assets
+- [PRD.md](mdc:PRD.md) - Product Requirements Document
+- [todo.md](mdc:todo.md) - Project todo list
+
+## Technology Stack
+- HTML5 semantic markup
+- Tailwind CSS via CDN
+- Vanilla JavaScript (ES6+)
+- No build process or frameworks
+
+description:
+globs:
+alwaysApply: true
+---

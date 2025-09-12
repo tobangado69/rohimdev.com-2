@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full antialiased">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="About Abdul Rohim - Full-Stack JavaScript Developer with telecommunications and infrastructure background. From Telkom Indonesia to modern web development." />
+  <meta name="keywords"
+    content="Abdul Rohim, About, Full-Stack Developer, JavaScript, Telecommunications, Infrastructure, Hacktiv8, Career Journey" />
+  <meta name="author" content="Abdul Rohim" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rohimdev.com/about.html" />
+  <meta property="og:title" content="About Abdul Rohim - Full-Stack Developer & Infrastructure Specialist" />
+  <meta property="og:description"
+    content="Learn about Abdul Rohim's journey from telecommunications to software development. Combining industry experience with modern development skills." />
+  <meta property="og:image" content="https://rohimdev.com/assets/images/about-og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://rohimdev.com/about.html" />
+  <meta property="twitter:title" content="About Abdul Rohim - Full-Stack Developer & Infrastructure Specialist" />
+  <meta property="twitter:description"
+    content="Learn about Abdul Rohim's journey from telecommunications to software development. Combining industry experience with modern development skills." />
+  <meta property="twitter:image" content="https://rohimdev.com/assets/images/about-og-image.jpg" />
+
+  <title>
+    About - Abdul Rohim | Full-Stack Developer & Infrastructure Specialist
+  </title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <!-- Styles moved to /assets/css/style.css -->
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/profile.png" />
+
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data for About Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Abdul Rohim",
+      "jobTitle": "Full-Stack Developer & Infrastructure Specialist",
+      "description": "Learn about Abdul Rohim's journey from telecommunications to software development. Combining industry experience with modern development skills.",
+      "url": "https://rohimdev.com/about.html",
+      "image": "https://rohimdev.com/assets/images/profile.png",
+      "email": "rohimjoy70@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Surabaya",
+        "addressCountry": "Indonesia"
+      },
+      "alumniOf": "Hacktiv8",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Full-Stack JavaScript Bootcamp",
+        "credentialCategory": "degree",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Hacktiv8"
+        },
+        "dateCreated": "2024"
+      },
+      "knowsAbout": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Golang",
+        "Nest.js",
+        "Network Infrastructure",
+        "Telecommunications",
+        "Full-Stack Development",
+        "Mikrotik",
+        "Ubiquiti",
+        "Fiber Optic"
+      ]
+    }
+  }
+  </script>
+
+  <!-- Tailwind Config -->
+  <!-- Tailwind config moved to /assets/js/main.js -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body class="min-h-full overflow-x-hidden text-white bg-black">
+  <!-- Navigation -->
+  <header class="fixed top-4 left-4 right-4 z-50 fade-in">
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="h-14 flex glass-effect bg-white/5 border-white/10 border rounded-full pr-3 pl-3 items-center justify-between">
+        <div class="flex gap-2 items-center">
+          <div class="w-8 h-8 flex bg-gradient-to-b from-blue-400 to-blue-600 rounded-full items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="hexagon" class="lucide lucide-hexagon h-4 w-4 text-white">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+            </svg>
+          </div>
+          <span class="text-lg font-medium sf-pro-display text-primary">Rohim Dev</span>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/" class="text-secondary hover:text-primary transition-colors">Home</a>
+          <a href="/about" class="text-primary font-semibold">About</a>
+          <a href="/work" class="text-secondary hover:text-primary transition-colors">Work</a>
+          <a href="/projects" class="text-secondary hover:text-primary transition-colors">Projects</a>
+          <a href="/services" class="text-secondary hover:text-primary transition-colors">Services</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="/contact" class="px-4 py-2 text-sm text-secondary hover:text-primary transition-colors">Contact</a>
+          <a href="/contact"
+            class="px-4 py-2 text-sm btn-primary rounded-full transition-all transform hover:scale-105">
+            Get Started
+          </a>
+        </div>
+
+        <button class="md:hidden p-2 text-primary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu"
+            class="lucide lucide-menu h-5 w-5">
+            <path d="M4 12h16"></path>
+            <path d="M4 18h16"></path>
+            <path d="M4 6h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+      <div class="hero-haze"></div>
+      <div class="hero-saber"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Content -->
+          <div class="slide-up stagger-1">
+            <h1
+              class="slide-up stagger-2 text-4xl sm:text-5xl lg:text-6xl sf-pro-display tracking-tight mb-6 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent font-light">
+              Full-Stack Developer
+            </h1>
+            <p class="slide-up stagger-3 text-xl text-white/70 mb-10 leading-relaxed">
+              Hi! I'm
+              <span class="font-semibold text-white">Abdul Rohim</span>, a
+              Full Stack Web Developer with a strong background in
+              telecommunications infrastructure and modern web development. I
+              build scalable, high-performance applications and robust backend
+              architectures.
+            </p>
+
+            <div class="slide-up stagger-4 flex flex-col sm:flex-row gap-4">
+              <a href="#journey" class="glow-btn">
+                <span class="icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    data-lucide="arrow-right" class="lucide lucide-arrow-right w-[24px] h-[24px]">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </span>
+                My Journey
+              </a>
+              <a href="contact.html"
+                class="hover:bg-white/30 transition-all flex gap-2 font-medium bg-[#000000] border-white/20 border rounded-full pt-4 pr-8 pb-4 pl-8 items-center text-white/90">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  data-lucide="message-circle" class="lucide lucide-message-circle h-5 w-5">
+                  <path
+                    d="M3 12c0-4.97 4.48-9 10-9s10 4.03 10 9-4.48 9-10 9c-1.38 0-2.69-.23-3.88-.66L3 21l1.17-3.51A8.7 8.7 0 0 1 3 12z">
+                  </path>
+                </svg>
+                Let's Connect
+              </a>
+            </div>
+          </div>
+
+          <!-- Profile Image -->
+          <div class="slide-up stagger-3">
+            <div class="relative">
+              <!-- Main image container -->
+              <div
+                class="w-80 h-80 mx-auto rounded-3xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/10 p-1 shadow-2xl">
+                <div class="w-full h-full rounded-3xl bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <!-- Professional Profile Image -->
+                  <img src="/assets/images/profile.png" alt="Abdul Rohim - Full-Stack Developer"
+                    class="w-full h-full object-cover rounded-3xl" style="object-position: center top;"
+                    loading="lazy" />
+                </div>
+              </div>
+
+              <!-- Floating elements -->
+              <div
+                class="absolute -top-4 -right-4 glass-effect bg-white/10 border border-white/20 rounded-xl p-3 shadow-lg">
+                <svg class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+
+              <div
+                class="absolute -bottom-4 -left-4 glass-effect bg-white/10 border border-white/20 rounded-xl p-3 shadow-lg">
+                <svg class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2 4h.01M17 16h.01" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            About Me
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 mx-auto"></div>
+        </div>
+
+        <div class="prose prose-lg mx-auto">
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8 mb-8">
+            <p class="text-lg text-white/90 leading-relaxed mb-6">
+              I'm a <strong class="text-cyan-400">full-stack JavaScript developer</strong> with a unique journey that
+              spans from hands-on telecommunications infrastructure to cutting-edge software development. My career
+              began in the trenches of network installation and troubleshooting at <strong
+                class="text-emerald-400">Telkom Indonesia</strong>, where I learned the fundamentals of how digital
+              systems actually work in the real world.
+            </p>
+
+            <p class="text-lg text-white/90 leading-relaxed mb-6">
+              After 3+ years of optimizing network performance and reducing connectivity issues by 25%, I realized I
+              wanted to build the applications that run on these networks. This led me to <strong
+                class="text-purple-400">Hacktiv8's intensive bootcamp</strong>, where I immersed myself in modern
+              development practices and emerged with the skills to create both web and mobile applications.
+            </p>
+
+            <p class="text-lg text-white/90 leading-relaxed">
+              Today, I combine this dual expertise as <strong class="text-orange-400">Staff Infrastructure at Varnion
+                Technology</strong>, where I've achieved a 40% reduction in connectivity issues while also developing
+              internal tools and applications. This unique perspective allows me to build software that's not just
+              user-friendly, but also technically robust, scalable, and optimized for real-world network conditions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- My Mission Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            My Mission
+          </h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-purple-400 to-cyan-400 mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Mission Statement -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-purple-400 rounded-lg flex items-center justify-center mb-6">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Bridging Two Worlds</h3>
+            <p class="text-white/80 leading-relaxed">
+              I believe the best software solutions come from understanding both the technical infrastructure and the
+              user experience. My mission is to create applications that not only look great and function perfectly, but
+              also perform optimally in real-world network conditions.
+            </p>
+          </div>
+
+          <!-- What I'm Looking For -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-6">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">What Excites Me</h3>
+            <p class="text-white/80 leading-relaxed">
+              I'm passionate about joining teams that value both technical excellence and user-centric design. I thrive
+              in environments where I can contribute to meaningful projects, learn from experienced developers, and help
+              build solutions that make a real difference in people's lives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Journey Section -->
+    <section id="journey" class="py-20 bg-gradient-to-b from-black to-gray-900">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            During My Career
+          </h2>
+          <p class="text-lg text-white/70 max-w-2xl mx-auto">
+            A journey from telecommunications infrastructure to modern
+            software development
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+          <!-- Timeline line -->
+          <div
+            class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-cyan-400 to-emerald-400">
+          </div>
+
+          <!-- Timeline items -->
+          <div class="space-y-12">
+            <!-- Current Role -->
+            <div class="relative flex items-center">
+              <div class="flex-1 pr-8 text-right">
+                <div
+                  class="premium-card glass-effect bg-white/5 border border-white/10 rounded-xl p-6 shadow-lg animate-slide-in-left">
+                  <div class="flex items-center justify-end mb-3">
+                    <span
+                      class="bg-green-500/20 text-green-300 border border-green-500/30 text-xs font-semibold px-3 py-1 rounded-full">Current</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    Staff Infrastructure
+                  </h3>
+                  <p class="text-cyan-400 font-semibold mb-1">
+                    Varnion Technology Semesta
+                  </p>
+                  <p class="text-white/60 text-sm mb-4">Jan 2025 - Present</p>
+                  <p class="text-white/80">
+                    Leading network infrastructure projects for hospitality industry clients, where I've successfully
+                    reduced connectivity issues by 40% through systematic monitoring and optimization. I also develop
+                    internal tools and applications to streamline our operations, combining my infrastructure expertise
+                    with modern development practices.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-4 justify-end">
+                    <span
+                      class="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full text-sm">Mikrotik</span>
+                    <span
+                      class="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full text-sm">Ubiquiti</span>
+                    <span
+                      class="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full text-sm">Network
+                      Design</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timeline dot -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-400 rounded-full border-4 border-gray-900 shadow-lg z-10">
+              </div>
+
+              <div class="flex-1 pl-8"></div>
+            </div>
+
+            <!-- Hacktiv8 Bootcamp -->
+            <div class="relative flex items-center">
+              <div class="flex-1 pr-8"></div>
+
+              <!-- Timeline dot -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-emerald-400 rounded-full border-4 border-gray-900 shadow-lg z-10">
+              </div>
+
+              <div class="flex-1 pl-8">
+                <div
+                  class="premium-card glass-effect bg-white/5 border border-white/10 rounded-xl p-6 shadow-lg animate-slide-in-right">
+                  <div class="flex items-center mb-3">
+                    <span
+                      class="bg-purple-500/20 text-purple-300 border border-purple-500/30 text-xs font-semibold px-3 py-1 rounded-full">Education</span>
+                  </div>
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    Full-Stack JavaScript Bootcamp
+                  </h3>
+                  <p class="text-emerald-400 font-semibold mb-1">Hacktiv8</p>
+                  <p class="text-white/60 text-sm mb-4">2024</p>
+                  <p class="text-white/80">
+                    The decision to pursue <strong>Hacktiv8's intensive bootcamp</strong> was a turning point in my
+                    career. After years of working with network infrastructure, I realized I wanted to build the
+                    applications that run on these networks. The bootcamp challenged me to think differently about
+                    problem-solving and gave me the modern development skills to create both web and mobile applications
+                    that users actually love.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-4">
+                    <span
+                      class="px-3 py-1 bg-green-500/20 text-green-300 border border-green-500/30 rounded-full text-sm">React</span>
+                    <span
+                      class="px-3 py-1 bg-green-500/20 text-green-300 border border-green-500/30 rounded-full text-sm">Node.js</span>
+                    <span
+                      class="px-3 py-1 bg-green-500/20 text-green-300 border border-green-500/30 rounded-full text-sm">Full-Stack</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Telkom Indonesia -->
+            <div class="relative flex items-center">
+              <div class="flex-1 pr-8 text-right">
+                <div
+                  class="premium-card glass-effect bg-white/5 border border-white/10 rounded-xl p-6 shadow-lg animate-slide-in-left">
+                  <h3 class="text-xl font-bold text-white mb-2">
+                    Provisioning Technician
+                  </h3>
+                  <p class="text-cyan-400 font-semibold mb-1">
+                    PT Telkom Indonesia (IndiHome)
+                  </p>
+                  <p class="text-white/60 text-sm mb-4">
+                    Dec 2020 - Aug 2023
+                  </p>
+                  <p class="text-white/80">
+                    My professional journey began as a technician at <strong>Telkom Indonesia</strong>, Indonesia's
+                    largest telecommunications company. This role taught me the importance of reliability, customer
+                    service excellence, and systematic problem-solving. I reduced repeat visits by 25% through quality
+                    workmanship and customer education, while mastering advanced tools like OTDR and OPM for fiber optic
+                    testing.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-4 justify-end">
+                    <span
+                      class="px-3 py-1 bg-orange-500/20 text-orange-300 border border-orange-500/30 rounded-full text-sm">Fiber
+                      Optic</span>
+                    <span
+                      class="px-3 py-1 bg-orange-500/20 text-orange-300 border border-orange-500/30 rounded-full text-sm">OTDR</span>
+                    <span
+                      class="px-3 py-1 bg-orange-500/20 text-orange-300 border border-orange-500/30 rounded-full text-sm">Customer
+                      Service</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timeline dot -->
+              <div
+                class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-400 rounded-full border-4 border-gray-900 shadow-lg z-10">
+              </div>
+
+              <div class="flex-1 pl-8"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Technologies Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Skills & Technologies
+          </h2>
+          <p class="text-lg text-white/70 max-w-2xl mx-auto">
+            A comprehensive skill set spanning both software development and
+            infrastructure management
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Frontend Development -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center mb-6">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Frontend Development
+            </h3>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">React & Next.js</span>
+                  <span class="text-white/60">90%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-cyan-400 h-2 rounded-full skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">JavaScript/TypeScript</span>
+                  <span class="text-white/60">85%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-cyan-400 h-2 rounded-full skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">Tailwind CSS</span>
+                  <span class="text-white/60">95%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-cyan-400 h-2 rounded-full skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend Development -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-emerald-400 rounded-lg flex items-center justify-center mb-6">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2 4h.01M17 16h.01" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Backend & Database
+            </h3>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">Golang & Node.js</span>
+                  <span class="text-white/60">85%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-emerald-400 h-2 rounded-full skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">PostgreSQL & MongoDB</span>
+                  <span class="text-white/60">75%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-emerald-400 h-2 rounded-full skill-progress" style="width: 75%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">Nest.js & Express</span>
+                  <span class="text-white/60">80%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-emerald-400 h-2 rounded-full skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">GraphQL & REST APIs</span>
+                  <span class="text-white/60">85%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-emerald-400 h-2 rounded-full skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infrastructure & Mobile -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-purple-400 rounded-lg flex items-center justify-center mb-6">
+              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">
+              Mobile & Infrastructure
+            </h3>
+            <div class="space-y-3">
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">React Native</span>
+                  <span class="text-white/60">80%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-purple-400 h-2 rounded-full skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">Network Configuration</span>
+                  <span class="text-white/60">90%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-purple-400 h-2 rounded-full skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-sm mb-1">
+                  <span class="text-white/80">Mikrotik & Ubiquiti</span>
+                  <span class="text-white/60">85%</span>
+                </div>
+                <div class="w-full bg-white/20 rounded-full h-2">
+                  <div class="bg-purple-400 h-2 rounded-full skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Achievements Section -->
+    <section class="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Key Achievements
+          </h2>
+          <p class="text-lg text-white/70 max-w-2xl mx-auto">
+            Measurable impact across infrastructure and development roles
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Achievement 1 -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-white">40%</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Connectivity Issues Reduced</h3>
+            <p class="text-white/70 text-sm">Through systematic monitoring and optimization at Varnion Technology</p>
+          </div>
+
+          <!-- Achievement 2 -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-white">25%</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Repeat Visits Decreased</h3>
+            <p class="text-white/70 text-sm">Quality workmanship and customer education at Telkom Indonesia</p>
+          </div>
+
+          <!-- Achievement 3 -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-white">100%</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Bootcamp Completion</h3>
+            <p class="text-white/70 text-sm">Successfully graduated from Hacktiv8's intensive full-stack program</p>
+          </div>
+
+          <!-- Achievement 4 -->
+          <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-2xl font-bold text-white">4+</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Years Experience</h3>
+            <p class="text-white/70 text-sm">Combined infrastructure and development expertise</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values & Approach Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-gray-900">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+            My Approach
+          </h2>
+          <p class="text-lg text-white/70 max-w-2xl mx-auto">
+            Core values and principles that guide my work and professional
+            relationships
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Problem Solving -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-cyan-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">
+              Problem Solving
+            </h3>
+            <p class="text-white/70">
+              Breaking down complex challenges into manageable solutions with
+              systematic thinking
+            </p>
+          </div>
+
+          <!-- Adaptability -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Adaptability</h3>
+            <p class="text-white/70">
+              Embracing new technologies and methodologies to stay current
+              with industry evolution
+            </p>
+          </div>
+
+          <!-- Collaboration -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-purple-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">
+              Collaboration
+            </h3>
+            <p class="text-white/70">
+              Working effectively in dynamic teams and building strong
+              professional relationships
+            </p>
+          </div>
+
+          <!-- Quality Focus -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">
+              Quality Focus
+            </h3>
+            <p class="text-white/70">
+              Committed to delivering robust, scalable solutions that exceed
+              expectations
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-20 bg-gray-900 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+          Ready to Collaborate?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          I'm a dedicated and adaptable professional, always open to new
+          opportunities and collaborations. If you'd like to connect or
+          discuss a project, feel free to reach out!
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html"
+            class="bg-primary-600 text-white px-8 py-3 rounded-lg hover:bg-primary-700 transition-colors font-medium">
+            Start a Conversation
+          </a>
+          <a href="work.html" class="btn-outline px-8 py-3 rounded-lg transition-colors font-medium">
+            View My Work
+          </a>
+          <a href="https://drive.google.com/file/d/1xOJ8LgtE1FLd9WIUxG31cIBemfF3Z4I0/view?usp=sharing" target="_blank"
+            rel="noopener noreferrer"
+            class="btn-secondary px-8 py-3 rounded-lg transition-colors font-medium flex items-center gap-2">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            Download Resume
+          </a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="mt-12 flex justify-center space-x-6">
+          <a href="https://linkedin.com/in/tobangado" target="_blank" rel="noopener noreferrer"
+            class="text-gray-400 hover:text-white transition-colors">
+            <span class="sr-only">LinkedIn</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a href="https://github.com/tobangado69" target="_blank" rel="noopener noreferrer"
+            class="text-gray-400 hover:text-white transition-colors">
+            <span class="sr-only">GitHub</span>
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="mailto:rohimjoy70@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+            <span class="sr-only">Email</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-bold mb-4">Rohim Dev</h3>
+          <p class="text-gray-400 mb-4 max-w-md">
+            Full-stack developer and infrastructure specialist creating
+            digital solutions that bridge technology and business needs.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://linkedin.com/in/tobangado" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white transition-colors">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://github.com/tobangado69" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-white transition-colors">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a href="mailto:rohimjoy70@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>
+              <a href="/" class="hover:text-white transition-colors">Home</a>
+            </li>
+            <li>
+              <a href="work.html" class="hover:text-white transition-colors">Work</a>
+            </li>
+            <li>
+              <a href="projects.html" class="hover:text-white transition-colors">Projects</a>
+            </li>
+            <li>
+              <a href="services.html" class="hover:text-white transition-colors">Services</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li>rohimjoy70@gmail.com</li>
+            <li>
+              <a href="contact.html" class="hover:text-white transition-colors">Contact Form</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Abdul Rohim. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- Mobile menu, smooth scrolling, and animations moved to /assets/js/main.js -->
+  <script src="/assets/js/main.js"></script>
+</body>
+
+</html>

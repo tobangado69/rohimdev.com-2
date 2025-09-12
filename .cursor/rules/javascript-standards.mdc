@@ -1,0 +1,123 @@
+---
+globs: *.js
+---
+
+# JavaScript Coding Standards
+
+## ES6+ Requirements
+- Use const/let instead of var
+- Use arrow functions where appropriate
+- Use template literals for string interpolation
+- Use destructuring for objects and arrays
+- Use async/await for asynchronous operations
+
+## Code Organization
+- Keep functions small and focused
+- Use descriptive variable and function names
+- Add comments for complex logic
+- Group related functionality together
+
+## DOM Manipulation
+- Cache DOM elements in variables
+- Use event delegation when appropriate
+- Remove event listeners when no longer needed
+- Validate form inputs properly
+
+## Performance
+- Debounce scroll and resize events
+- Use requestAnimationFrame for animations
+- Minimize DOM queries
+- Use efficient selectors
+```
+
+```markdown:.cursor/rules/styling-guidelines.mdc
+---
+globs: *.html,*.css
+---
+
+# Styling Guidelines
+
+## Tailwind CSS Usage
+- Use Tailwind utility classes for all styling
+- Follow mobile-first approach (sm:, md:, lg:, xl:)
+- Use consistent spacing scale (p-4, m-6, etc.)
+- Utilize Tailwind's color palette
+
+## Component Patterns
+- Create reusable component classes in custom CSS
+- Use @apply directive for custom components
+- Keep component styles modular
+- Document custom utility classes
+
+## Responsive Design
+- Mobile: 320px+ (default)
+- Tablet: 768px+ (md:)
+- Desktop: 1024px+ (lg:)
+- Large: 1280px+ (xl:)
+
+## Color and Typography
+- Use consistent color scheme throughout
+- Maintain proper typography hierarchy
+- Ensure sufficient color contrast
+- Use system fonts for performance
+```
+
+```markdown:.cursor/rules/portfolio-content.mdc
+---
+description: "Portfolio content and professional information"
+---
+
+# Abdul Rohim Portfolio Content
+
+## Professional Background
+- **Current Role:** Full-stack JavaScript Developer
+- **Previous:** Telkom Indonesia Technician
+- **Education:** Hacktiv8 Bootcamp Graduate
+- **Specialties:** Web and Mobile Development
+
+## Technology Stack
+### Frontend
+- HTML5, CSS3, JavaScript (ES6+)
+- React, Next.js, TypeScript
+- Tailwind CSS
+
+### Mobile
+- React Native
+
+### Backend
+- Node.js, Express.js, Nest.js
+- Golang
+
+### Databases
+- MongoDB, PostgreSQL, MySQL
+- Redis, Supabase
+
+### Tools & Deployment
+- GraphQL, REST API
+- Apollo Client/Server
+- Jest, Supertest
+- AWS, Firebase, Vercel
+- Figma
+
+## Featured Projects
+1. **Mobile Fb (April 2024)**
+   - React Native Facebook clone
+   - GraphQL + Apollo implementation
+   
+2. **Chat App (February 2024)**
+   - Real-time messaging app
+   - React + Node.js + Socket.IO + PostgreSQL
+
+## Contact Information
+- **Email:** rohimjoy70@gmail.com
+- **LinkedIn:** Abdul Rohim (https://linkedin.com/in/tobangado)
+- **GitHub:** Tobangado69 (https://github.com/tobangado69)
+```
+
+These documents provide a comprehensive foundation for your portfolio website project. The PRD outlines all requirements and goals, the todo list breaks down the work into manageable tasks, and the Cursor rules will help maintain consistent coding standards throughout development.
+
+Would you like me to help you start implementing any specific part of the website, or would you like to modify any of these planning documents?
+description:
+globs:
+alwaysApply: true
+---

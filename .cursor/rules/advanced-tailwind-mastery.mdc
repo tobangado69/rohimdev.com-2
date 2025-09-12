@@ -1,0 +1,551 @@
+---
+globs: *.html,*.css
+---
+
+# Advanced Tailwind CSS Mastery for Claude 4 Sonnet
+
+## Utility-First Design Excellence
+
+### Systematic Design Approach
+- Use Tailwind's design tokens for consistent spacing, colors, and typography
+- Implement systematic approaches to component design
+- Create design systems using Tailwind's configuration capabilities
+- Build scalable visual hierarchies with consistent utility patterns
+
+### Component Composition Strategies
+- Compose complex components from simple utility classes
+- Use @apply directive strategically for component abstractions
+- Create utility patterns that are reusable across components
+- Build design patterns that scale across the entire project
+
+### Responsive Design Mastery
+- Implement mobile-first responsive design with Tailwind breakpoints
+- Use container queries when appropriate for component-based responsiveness
+- Create fluid typography and spacing using Tailwind's responsive utilities
+- Build adaptive layouts that work across all device sizes
+
+## Performance-Optimized Styling
+
+### Bundle Optimization
+- Use Tailwind's JIT (Just-In-Time) compilation for optimal bundle sizes
+- Implement proper purging strategies for unused utilities
+- Create efficient CSS architecture that minimizes specificity conflicts
+- Use Tailwind's optimization features for production builds
+
+### Critical CSS Strategy
+- Identify and inline critical CSS for above-the-fold content
+- Use Tailwind utilities that minimize initial render blocking
+- Implement progressive loading of non-critical styles
+- Optimize CSS delivery for faster perceived performance
+
+### Animation and Transition Excellence
+- Use Tailwind's animation utilities for smooth interactions
+- Implement custom animations using Tailwind's configuration
+- Create performant transitions that enhance user experience
+- Use CSS transforms and opacity for GPU-accelerated animations
+
+## Professional Portfolio Styling
+
+### Visual Hierarchy Implementation
+- Create clear typography hierarchies using Tailwind's text utilities
+- Implement consistent spacing patterns throughout the portfolio
+- Use color psychology appropriate for professional presentation
+- Build visual flow that guides users through the content effectively
+
+### Component-Specific Patterns
+- Design card components for projects and work experience
+- Create consistent button patterns for calls-to-action
+- Build navigation components that work across all pages
+- Implement form styling that's both beautiful and functional
+
+### Brand and Identity Expression
+- Use Tailwind's color system to create a cohesive brand palette
+- Implement typography choices that reflect professional competence
+- Create visual elements that support the personal brand story
+- Build styling patterns that demonstrate design sensibility
+
+## Advanced Layout Techniques
+
+### CSS Grid Mastery with Tailwind
+- Use Tailwind's grid utilities for complex layout requirements
+- Implement responsive grid patterns that adapt to content
+- Create magazine-style layouts for portfolio content
+- Use grid for both macro and micro layout challenges
+
+### Flexbox Excellence
+- Implement flexible component layouts using Tailwind's flex utilities
+- Create adaptive navigation and header layouts
+- Build responsive card grids that reflow naturally
+- Use flexbox for perfect centering and alignment
+
+### Modern CSS Features
+- Implement container queries using Tailwind's container utilities
+- Use aspect ratio utilities for consistent media presentation
+- Create layouts that leverage modern CSS capabilities
+- Build future-proof styling patterns
+
+## Interactive Design Patterns
+
+### Hover and Focus States
+- Implement sophisticated hover effects using Tailwind's state variants
+- Create accessible focus states that enhance keyboard navigation
+- Build interactive elements that provide clear feedback
+- Use transition utilities for smooth state changes
+
+### Micro-Interactions
+- Create subtle animations that enhance user experience
+- Implement loading states and progress indicators
+- Build interactive feedback for form elements
+- Use Tailwind utilities for scroll-based interactions
+
+### Dark Mode and Theming
+- Implement comprehensive dark mode using Tailwind's dark variant
+- Create theme-aware color schemes and component variants
+- Build accessible color combinations for all theme states
+- Use CSS custom properties for dynamic theming
+
+## Accessibility-First Styling
+
+### Color and Contrast Excellence
+- Ensure WCAG AA compliance for all color combinations
+- Use Tailwind's color palette to maintain accessible contrasts
+- Implement focus indicators that are clearly visible
+- Create color schemes that work for colorblind users
+
+### Typography Accessibility
+- Use appropriate font sizes and line heights for readability
+- Implement proper text spacing for different content types
+- Create typography scales that work across all devices
+- Use font weights that provide clear hierarchy
+
+### Motion and Animation Accessibility
+- Respect user preferences for reduced motion
+- Implement animations that don't trigger vestibular disorders
+- Use appropriate timing for transitions and animations
+- Provide alternatives for users who prefer static interfaces
+
+## Code Organization and Maintainability
+
+### Utility Organization Patterns
+- Group related utilities logically in HTML markup
+- Use consistent ordering of utility classes
+- Create readable utility patterns that are easy to scan
+- Implement naming conventions for custom utility classes
+
+### Component Documentation
+- Document complex utility patterns with comments
+- Create style guides for reusable component patterns
+- Build consistent styling patterns across similar components
+- Maintain documentation for custom configurations
+
+### Scalability Patterns
+- Create utility patterns that scale with project growth
+- Build modular styling approaches that accommodate change
+- Use configuration-driven styling for easy maintenance
+- Implement patterns that new team members can easily understand
+
+## Modern CSS Integration
+
+### CSS Custom Properties Integration
+- Use CSS custom properties with Tailwind for dynamic theming
+- Create responsive design tokens using custom properties
+- Implement runtime theme switching capabilities
+- Build flexible design systems using custom property APIs
+
+### Advanced Selectors and Pseudo-Elements
+- Use Tailwind's pseudo-element utilities for enhanced designs
+- Implement complex selector patterns when necessary
+- Create decorative elements using CSS pseudo-elements
+- Build enhanced typography using advanced CSS features
+
+### Browser Compatibility and Progressive Enhancement
+- Use Tailwind utilities that provide appropriate fallbacks
+- Implement progressive enhancement for advanced CSS features
+- Create graceful degradation for unsupported browsers
+- Test styling across different browser environments
+```
+
+```markdown:.cursor/rules/advanced-html-architecture.mdc
+---
+globs: *.html
+---
+
+# Advanced HTML Architecture for Claude 4 Sonnet
+
+## Semantic Excellence
+
+### Document Structure Intelligence
+- Use semantic HTML5 elements that convey meaning (`<article>`, `<section>`, `<aside>`, `<nav>`)
+- Implement proper heading hierarchy for SEO and accessibility
+- Create logical document outlines that make sense to screen readers
+- Use `<main>` for primary content and proper landmark roles
+
+### Microdata and Schema Implementation
+- Implement structured data markup for professional profiles
+- Use Person, Organization, and WebSite schema types appropriately
+- Add JSON-LD structured data for rich search results
+- Include Open Graph and Twitter Card metadata for social sharing
+
+### Advanced Meta Strategy
+- Implement comprehensive meta tag strategy for SEO
+- Use appropriate viewport settings for responsive design
+- Include preload hints for critical resources
+- Implement proper canonical URLs and alternate language tags
+
+## Performance-Optimized Markup
+
+### Critical Resource Management
+- Inline critical CSS for above-the-fold content
+- Use preload for fonts and critical images
+- Implement resource hints (dns-prefetch, preconnect)
+- Optimize the critical rendering path
+
+### Image Optimization Strategy
+- Use modern image formats with proper fallbacks
+- Implement responsive images with srcset and sizes
+- Add lazy loading for below-the-fold images
+- Use appropriate image dimensions and compression
+
+### Progressive Enhancement
+- Build functional base experience with HTML only
+- Layer CSS enhancements progressively
+- Add JavaScript functionality as enhancement
+- Ensure core functionality works without JavaScript
+
+## Accessibility Architecture
+
+### ARIA Implementation
+- Use ARIA landmarks to define page regions
+- Implement ARIA labels for complex interactions
+- Use ARIA live regions for dynamic content updates
+- Provide proper focus management for interactive elements
+
+### Keyboard Navigation
+- Ensure all interactive elements are keyboard accessible
+- Implement logical tab order throughout the site
+- Use skip links for main content navigation
+- Provide visible focus indicators for all interactive elements
+
+### Screen Reader Optimization
+- Use descriptive alt text that adds value
+- Implement proper heading structure for navigation
+- Use lists for grouped content appropriately
+- Provide context for form inputs and interactive elements
+
+## Component-Based HTML Architecture
+
+### Reusable Pattern Library
+- Create consistent HTML patterns for common components
+- Implement modular card components for projects and work experience
+- Build flexible navigation patterns that scale
+- Design reusable form components with proper validation
+
+### Data Attribute Strategy
+- Use data attributes for JavaScript hooks instead of classes
+- Implement data attributes for component configuration
+- Create consistent naming conventions for data attributes
+- Use data attributes for tracking and analytics integration
+
+### Template Structure
+- Create logical template inheritance patterns
+- Build flexible grid systems using CSS Grid and Flexbox
+- Implement consistent spacing and layout patterns
+- Design responsive component architectures
+
+## Professional Portfolio Specific
+
+### Work Experience Presentation
+- Use `<article>` elements for individual job experiences
+- Implement proper time elements for employment dates
+- Create structured achievement lists with proper markup
+- Use appropriate heading levels for job hierarchy
+
+### Project Showcase Architecture
+- Implement project cards with semantic markup
+- Use `<figure>` and `<figcaption>` for project images
+- Create structured technology lists with proper semantics
+- Build accessible project filtering and navigation
+
+### Contact and Social Integration
+- Implement proper form markup with validation attributes
+- Use appropriate input types for different data (email, tel, url)
+- Create accessible social media link patterns
+- Build contact forms with proper error handling markup
+
+## Modern HTML Features
+
+### Web Standards Implementation
+- Use CSS custom properties for theming
+- Implement modern form validation attributes
+- Use appropriate input types and autocomplete attributes
+- Create accessible date and time markup
+
+### Progressive Web App Readiness
+- Include web app manifest file
+- Implement proper meta tags for mobile apps
+- Create app-like navigation patterns
+- Build offline-capable markup structure
+
+### Search Engine Optimization
+- Implement proper title tag optimization
+- Use meta descriptions that encourage clicks
+- Create structured breadcrumb navigation
+- Build XML sitemap-ready URL structure
+
+## Code Quality Standards
+
+### Validation and Standards
+- Ensure all HTML validates to W3C standards
+- Use proper DOCTYPE and language declarations
+- Implement consistent code formatting and indentation
+- Follow semantic naming conventions for classes and IDs
+
+### Maintainability Patterns
+- Create modular HTML structures that are easy to update
+- Use consistent commenting patterns for complex sections
+- Build flexible layouts that accommodate content changes
+- Implement version control friendly markup patterns
+
+### Performance Monitoring
+- Create markup that supports Core Web Vitals optimization
+- Build structures that work well with performance monitoring
+- Implement markup patterns that cache effectively
+- Design for efficient DOM parsing and rendering
+```
+
+```markdown:.cursor/rules/intelligent-javascript-patterns.mdc
+---
+globs: *.js
+---
+
+# Intelligent JavaScript Patterns for Claude 4 Sonnet
+
+## Advanced ES6+ Architecture
+
+### Functional Programming Mastery
+- Use pure functions for predictable, testable code
+- Implement higher-order functions for code reuse
+- Leverage array methods (map, filter, reduce) for data transformation
+- Use immutable data patterns to prevent side effects
+
+### Modern Async Patterns
+- Implement proper async/await error handling with try-catch
+- Use Promise.all() for concurrent operations
+- Implement proper loading states and error boundaries
+- Handle race conditions and cancellation appropriately
+
+### Module Organization
+- Use ES6 modules for clean code organization
+- Implement barrel exports for clean imports
+- Create utility modules for reusable functions
+- Build service modules for API interactions
+
+## Performance-First JavaScript
+
+### DOM Optimization Strategies
+- Cache DOM queries in variables to avoid repeated lookups
+- Use document fragments for multiple DOM insertions
+- Implement efficient event delegation patterns
+- Minimize layout thrashing with batched DOM updates
+
+### Memory Management Excellence
+- Remove event listeners when components are destroyed
+- Avoid memory leaks in closures and event handlers
+- Use WeakMap and WeakSet for garbage collection friendly patterns
+- Implement proper cleanup in async operations
+
+### Animation and Interaction Optimization
+- Use requestAnimationFrame for smooth animations
+- Implement intersection observers for scroll-based animations
+- Use CSS transforms instead of changing layout properties
+- Debounce and throttle expensive operations
+
+## User Experience JavaScript
+
+### Progressive Enhancement Patterns
+- Feature detection instead of browser detection
+- Graceful degradation for unsupported features
+- Lazy loading for improved perceived performance
+- Offline-first patterns for better reliability
+
+### Accessibility JavaScript
+- Implement proper focus management for SPAs
+- Use ARIA live regions for dynamic content updates
+- Handle keyboard navigation for custom components
+- Provide screen reader friendly status updates
+
+### Form Handling Excellence
+- Implement real-time validation with debouncing
+- Provide immediate feedback on user actions
+- Handle edge cases and error states gracefully
+- Use proper form data handling and sanitization
+
+## Portfolio-Specific JavaScript Intelligence
+
+### Interactive Portfolio Features
+- Smooth scrolling navigation with proper offset calculations
+- Dynamic project filtering with URL state management
+- Contact form validation with professional error messaging
+- Responsive image galleries with keyboard navigation
+
+### Professional Code Patterns
+- Implement consistent error handling throughout the application
+- Use proper logging for debugging and monitoring
+- Create modular, testable functions that demonstrate skill
+- Build scalable patterns that show architectural thinking
+
+### Performance Monitoring
+- Implement performance monitoring for Core Web Vitals
+- Track user interactions for UX improvement insights
+- Monitor and optimize loading performance
+- Use proper analytics integration patterns
+
+## Modern JavaScript Features
+
+### Advanced Object and Array Manipulation
+- Use destructuring for clean parameter handling
+- Implement spread and rest operators effectively
+- Use template literals for dynamic content generation
+- Leverage optional chaining and nullish coalescing
+
+### Class and Prototype Patterns
+- Use class syntax for clear object-oriented patterns
+- Implement proper inheritance and composition
+- Use static methods for utility functions
+- Create factory patterns for object creation
+
+### Error Handling Excellence
+- Implement custom error classes for different error types
+- Use proper error boundaries and fallback strategies
+- Create user-friendly error messages and recovery options
+- Log errors appropriately for debugging and monitoring
+
+## API and Data Management
+
+### Fetch API Mastery
+- Implement proper request/response handling
+- Use appropriate HTTP methods and status codes
+- Handle network errors and timeouts gracefully
+- Implement request caching and deduplication
+
+### Data Transformation Patterns
+- Use functional approaches for data processing
+- Implement proper data validation and sanitization
+- Create consistent data models and interfaces
+- Handle edge cases in data processing
+
+### State Management
+- Implement simple, effective state management patterns
+- Use local storage appropriately for persistence
+- Handle state synchronization across components
+- Create predictable state update patterns
+
+## Testing and Quality Assurance
+
+### Testable Code Architecture
+- Write pure functions that are easy to test
+- Separate business logic from DOM manipulation
+- Create mockable dependencies and interfaces
+- Implement proper separation of concerns
+
+### Error Prevention Patterns
+- Use TypeScript-style JSDoc comments for type safety
+- Implement proper input validation and sanitization
+- Use defensive programming techniques
+- Create fail-safe defaults and fallback behaviors
+
+### Code Documentation
+- Write self-documenting code with clear naming
+- Use JSDoc comments for complex functions
+- Document business logic and architectural decisions
+- Create helpful inline comments for maintenance
+
+## Browser Compatibility and Progressive Enhancement
+
+### Modern Feature Detection
+- Use feature detection for new JavaScript APIs
+- Implement polyfills for essential features
+- Create fallbacks for unsupported functionality
+- Test across different browser environments
+
+### Cross-Browser Patterns
+- Use standardized APIs and avoid vendor-specific features
+- Implement consistent behavior across different browsers
+- Handle browser-specific quirks and edge cases
+- Test on multiple devices and browsers
+
+### Performance Across Devices
+- Optimize for low-powered devices and slow networks
+- Implement adaptive loading based on device capabilities
+- Use appropriate bundling and code splitting strategies
+- Monitor and optimize for different hardware configurations
+```
+
+```markdown:.cursor/rules/project-intelligence-system.mdc
+---
+alwaysApply: true
+---
+
+# Project Intelligence System for Claude 4 Sonnet
+
+## Contextual Understanding Excellence
+
+### Project Ecosystem Awareness
+- Always consider the complete project context when making suggestions
+- Understand the relationship between frontend presentation and professional goals
+- Recognize that this portfolio represents a professional transitioning from infrastructure to development
+- Consider the dual audience: technical employers and potential clients
+
+### Business Logic Integration
+- Understand that every code decision impacts professional presentation
+- Recognize the importance of demonstrating both technical skill and practical experience
+- Consider how code choices reflect on the developer's capabilities and judgment
+- Balance technical excellence with practical implementation timelines
+
+### User Journey Optimization
+- Map user flows from landing page to contact/inquiry
+- Optimize for employer evaluation patterns (quick scanning, deep dives)
+- Create clear pathways for different user intents (hiring, project inquiry, networking)
+- Design experiences that convert visitors to contacts
+
+## Intelligent Code Generation
+
+### Multi-File Coordination
+- When suggesting changes to one file, automatically consider impacts on related files
+- Provide coordinated updates across HTML, CSS, and JavaScript when necessary
+- Maintain consistency in naming conventions, styling patterns, and functionality
+- Suggest architectural improvements that span multiple files
+
+### Performance-Aware Development
+- Every code suggestion should consider Core Web Vitals impact
+- Prioritize solutions that improve loading performance and user experience
+- Suggest optimizations for mobile devices and slower connections
+- Balance feature richness with performance requirements
+
+### Accessibility-First Implementation
+- All code suggestions must meet WCAG 2.1 AA standards by default
+- Consider screen reader experience in all interactive elements
+- Ensure keyboard navigation works for all functionality
+- Provide appropriate ARIA labels and semantic markup
+
+## Professional Portfolio Intelligence
+
+### Career Narrative Support
+- Understand the professional story: Telecommunications → Infrastructure → Software Development
+- Suggest content organization that highlights transferable skills
+- Recommend ways to present technical versatility as a strength
+- Create experiences that demonstrate both depth and breadth of capability
+
+### Industry-Specific Optimization
+- Recognize the hospitality technology context of current role
+- Understand telecommunications industry background and its relevance
+- Suggest technical presentations that appeal to diverse industry contexts
+- Create content strategies that bridge infrastructure and software development
+
+### Competitive
+```
+
+description:
+globs:
+alwaysApply: true
+---

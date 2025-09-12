@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full antialiased">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Abdul Rohim - Full-Stack JavaScript Developer & Infrastructure Specialist. Experience in telecommunications, network infrastructure, and modern web development." />
+  <meta name="keywords"
+    content="Abdul Rohim, Full-Stack Developer, JavaScript, React, Golang, Nest.js, Infrastructure, Network Engineer, Telecommunications" />
+  <meta name="author" content="Abdul Rohim" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rohimdev.com/" />
+  <meta property="og:title" content="Abdul Rohim - Full-Stack Developer & Infrastructure Specialist" />
+  <meta property="og:description"
+    content="Full-stack JavaScript developer with infrastructure expertise. Specializing in React, Node.js, Golang, Nest.js, and network systems." />
+  <meta property="og:image" content="https://rohimdev.com/assets/images/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://rohimdev.com/" />
+  <meta property="twitter:title" content="Abdul Rohim - Full-Stack Developer & Infrastructure Specialist" />
+  <meta property="twitter:description"
+    content="Full-stack JavaScript developer with infrastructure expertise. Specializing in React, Node.js, Golang, Nest.js, and network systems." />
+  <meta property="twitter:image" content="https://rohimdev.com/assets/images/og-image.jpg" />
+
+  <title>
+    Abdul Rohim - Full-Stack Developer & Infrastructure Specialist
+  </title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/assets/images/profile.png" />
+
+  <!-- Preload critical resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+  </noscript>
+
+  <!-- Preload critical images -->
+  <link rel="preload" href="assets/images/profile.webp" as="image" type="image/webp" />
+  <link rel="preload" href="assets/images/profile.png" as="image" type="image/png" />
+
+  <!-- DNS prefetch for external resources -->
+  <link rel="dns-prefetch" href="//cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="//unpkg.com" />
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdul Rohim",
+    "jobTitle": "Full-Stack Developer & Infrastructure Specialist",
+    "description": "Full-stack JavaScript developer with infrastructure expertise. Specializing in React, Node.js, Golang, Nest.js, and network systems.",
+    "url": "https://rohimdev.com",
+    "image": "https://rohimdev.com/assets/images/profile.png",
+    "email": "rohimjoy70@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Surabaya",
+      "addressCountry": "Indonesia"
+    },
+    "alumniOf": "Hacktiv8",
+    "knowsAbout": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Golang",
+      "Nest.js",
+      "Network Infrastructure",
+      "Telecommunications",
+      "Full-Stack Development"
+    ],
+    "hasOccupation": [
+      {
+        "@type": "Occupation",
+        "name": "Staff Infrastructure",
+        "occupationLocation": {
+          "@type": "Place",
+          "name": "Varnion Technology Semesta"
+        },
+        "startDate": "2025-01-01"
+      },
+      {
+        "@type": "Occupation",
+        "name": "Provisioning Technician",
+        "occupationLocation": {
+          "@type": "Place",
+          "name": "PT Telkom Indonesia"
+        },
+        "startDate": "2020-12-01",
+        "endDate": "2023-08-31"
+      }
+    ],
+    "sameAs": [
+      "https://linkedin.com/in/tobangado",
+      "https://github.com/tobangado69"
+    ]
+  }
+  </script>
+
+
+  <!-- Tailwind Config -->
+  <!-- Tailwind config moved to /assets/js/main.js -->
+</head>
+
+<body class="min-h-full overflow-x-hidden text-white bg-black">
+  <!-- Navigation -->
+  <header class="fixed top-4 left-4 right-4 z-50 fade-in">
+    <div class="max-w-7xl mx-auto">
+      <div
+        class="h-14 flex glass-effect bg-white/5 border-white/10 border rounded-full pr-3 pl-3 items-center justify-between">
+        <div class="flex gap-2 items-center">
+          <div class="w-8 h-8 flex bg-gradient-to-b from-blue-400 to-blue-600 rounded-full items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="hexagon" class="lucide lucide-hexagon h-4 w-4 text-white">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+            </svg>
+          </div>
+          <span class="text-lg font-medium sf-pro-display">Rohim Dev</span>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/" class="text-white font-semibold">Home</a>
+          <a href="/about" class="text-white/70 hover:text-white transition-colors">About</a>
+          <a href="/work" class="text-white/70 hover:text-white transition-colors">Work</a>
+          <a href="/projects" class="text-white/70 hover:text-white transition-colors">Projects</a>
+          <a href="/services" class="text-white/70 hover:text-white transition-colors">Services</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="/contact" class="px-4 py-2 text-sm text-white/70 hover:text-white transition-colors">Contact</a>
+          <a href="/contact"
+            class="px-4 py-2 text-sm btn-primary rounded-full transition-all transform hover:scale-105">
+            Get Started
+          </a>
+        </div>
+
+        <button class="md:hidden p-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu"
+            class="lucide lucide-menu h-5 w-5">
+            <path d="M4 12h16"></path>
+            <path d="M4 18h16"></path>
+            <path d="M4 6h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-20"> <!-- Hero Section -->
+    <section class="py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">`
+      <div class="hero-haze"></div>
+      <div class="hero-saber"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Content -->
+          <div class="slide-up stagger-1">
+            <div
+              class="slide-up stagger-2 inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-full mb-8">
+              <div class="w-2 h-2 rounded-full animate-pulse bg-cyan-400"></div>
+              <span class="text-sm font-medium">Full-Stack Developer & Infrastructure Specialist</span>
+            </div>
+
+            <h1
+              class="slide-up stagger-2 text-5xl sm:text-6xl lg:text-7xl sf-pro-display tracking-tight mb-8 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent font-light">
+              Think different.<br />
+              Build exceptional.
+            </h1>
+
+            <p class="slide-up stagger-3 max-w-2xl leading-relaxed text-lg font-normal text-white/60 mb-12">
+              From telecommunications to software development. I build
+              scalable web applications and design robust network
+              infrastructure. Combining 4+ years of industry experience with
+              modern development practices.
+            </p>
+
+            <div class="slide-up stagger-4 flex flex-col sm:flex-row gap-4">
+              <button class="glow-btn" style="--x: 147.5882568359375px; --y: 32.68756103515625px">
+                <span class="icon-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    data-lucide="arrow-right" class="lucide lucide-arrow-right w-[24px] h-[24px]">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </span>
+                View My Work
+              </button>
+
+              <button
+                class="btn-secondary transition-all flex gap-2 font-medium rounded-full pt-4 pr-8 pb-4 pl-8 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  data-lucide="monitor" class="lucide lucide-monitor h-5 w-5">
+                  <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+                  <line x1="8" x2="16" y1="21" y2="21"></line>
+                  <line x1="12" x2="12" y1="17" y2="21"></line>
+                </svg>
+                View Projects
+              </button>
+            </div>
+          </div>
+
+          <!-- Profile Image -->
+          <div class="slide-up stagger-3">
+            <div class="relative">
+              <div
+                class="w-80 h-80 mx-auto rounded-3xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 border border-white/10 p-1 shadow-2xl premium-card">
+                <div class="w-full h-full rounded-3xl bg-gray-100 flex items-center justify-center overflow-hidden">
+                  <!-- Professional Profile Image -->
+                  <img src="assets/images/profile.png" alt="Abdul Rohim - Full-Stack Developer"
+                    class="w-full h-full object-cover rounded-3xl" style="object-position: center top;"
+                    loading="lazy" />
+                </div>
+              </div>
+
+              <!-- Floating elements -->
+              <div
+                class="absolute -top-4 -right-4 glass-effect bg-white/10 border border-white/20 rounded-xl p-3 shadow-lg">
+                <svg class="h-8 w-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+
+              <div
+                class="absolute -bottom-4 -left-4 glass-effect bg-white/10 border border-white/20 rounded-xl p-3 shadow-lg">
+                <svg class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2 4h.01M17 16h.01" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Professional Experience -->
+    <section class="py-32 bg-gradient-to-b from-secondary to-primary">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <div
+            class="slide-up stagger-1 inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-full mb-8">
+            <div class="w-2 h-2 rounded-full animate-pulse bg-cyan-400"></div>
+            <span class="text-sm font-medium text-secondary">Professional Experience</span>
+          </div>
+          <h2
+            class="slide-up stagger-2 text-4xl sm:text-5xl lg:text-6xl sf-pro-display tracking-tight mb-8 bg-gradient-to-b from-primary to-secondary bg-clip-text text-transparent font-light">
+            4+ years of excellence
+          </h2>
+          <p class="slide-up stagger-3 text-lg text-secondary max-w-2xl mx-auto">
+            Spanning telecommunications and software development
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Varnion Technology Card -->
+          <div
+            class="slide-up stagger-1 premium-card glass-effect bg-card border border-default rounded-2xl p-8 hover:shadow-lg transition-all duration-500">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <h3 class="text-xl font-bold text-primary sf-pro-display mb-2">
+                  Staff Infrastructure
+                </h3>
+                <p class="text-cyan-400 font-semibold">
+                  Varnion Technology Semesta
+                </p>
+                <p class="text-secondary text-sm">Jan 2025 - Present</p>
+              </div>
+              <div class="text-cyan-400">
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+            </div>
+            <p class="text-white/70 mb-6 leading-relaxed">
+              Leading network infrastructure projects for hospitality industry
+              clients. Achieved 40% reduction in connectivity issues through
+              systematic monitoring and optimization.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30">Mikrotik</span>
+              <span
+                class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30">Ubiquiti</span>
+              <span
+                class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30">Network
+                Design</span>
+            </div>
+            <div class="text-cyan-400 font-semibold">
+              40% reduction in connectivity issues
+            </div>
+          </div>
+
+          <!-- Telkom Indonesia Card -->
+          <div
+            class="slide-up stagger-2 premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
+            <div class="flex items-start justify-between mb-6">
+              <div>
+                <h3 class="text-xl font-bold text-white sf-pro-display mb-2">
+                  Provisioning Technician
+                </h3>
+                <p class="text-emerald-400 font-semibold">
+                  PT Telkom Indonesia
+                </p>
+                <p class="text-white/60 text-sm">Dec 2020 - Aug 2023</p>
+              </div>
+              <div class="text-emerald-400">
+                <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+            </div>
+            <p class="text-white/70 mb-6 leading-relaxed">
+              Managed fiber optic installations and internet service
+              provisioning. Reduced repeat visits by 25% through quality
+              workmanship and customer education.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium border border-emerald-500/30">Fiber
+                Optic</span>
+              <span
+                class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium border border-emerald-500/30">OTDR</span>
+              <span
+                class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium border border-emerald-500/30">Customer
+                Service</span>
+            </div>
+            <div class="text-emerald-400 font-semibold">
+              25% reduction in repeat visits
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/work" class="text-cyan-400 hover:text-cyan-300 font-medium inline-flex items-center group">
+            View Complete Work History
+            <svg class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Preview -->
+    <section class="py-32 bg-gradient-to-b from-black to-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <div
+            class="slide-up stagger-1 inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-full mb-8">
+            <div class="w-2 h-2 rounded-full animate-pulse bg-cyan-400"></div>
+            <span class="text-sm font-medium">Featured Projects</span>
+          </div>
+          <h2
+            class="slide-up stagger-2 text-4xl sm:text-5xl lg:text-6xl sf-pro-display tracking-tight mb-8 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent font-light">
+            Showcasing modern development
+          </h2>
+          <p class="slide-up stagger-3 text-lg text-white/60 max-w-2xl mx-auto">
+            Practical applications built with cutting-edge technologies
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Mobile Fb Project -->
+          <div
+            class="slide-up stagger-1 premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
+            <div class="mb-6">
+              <div
+                class="w-full h-48 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-xl flex items-center justify-center mb-4 border border-white/10">
+                <span class="text-6xl">📱</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white sf-pro-display mb-2">
+              Mobile Fb
+            </h3>
+            <p class="text-white/70 mb-6 leading-relaxed">
+              A React Native Facebook clone demonstrating mobile development
+              skills with GraphQL integration and real-time features.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30">React
+                Native</span>
+              <span
+                class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium border border-purple-500/30">GraphQL</span>
+              <span
+                class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium border border-emerald-500/30">Apollo</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-white/60">April 2024</span>
+              <a href="/projects#mobile-fb" class="text-cyan-400 hover:text-cyan-300 font-medium group">
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <!-- Chat App Project -->
+          <div
+            class="slide-up stagger-2 premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500">
+            <div class="mb-6">
+              <div
+                class="w-full h-48 bg-gradient-to-br from-emerald-500/20 to-teal-600/20 rounded-xl flex items-center justify-center mb-4 border border-white/10">
+                <span class="text-6xl">💬</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-white sf-pro-display mb-2">
+              Chat App
+            </h3>
+            <p class="text-white/70 mb-6 leading-relaxed">
+              Real-time messaging application built with React and Socket.IO,
+              featuring live chat functionality and user presence indicators.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium border border-blue-500/30">React</span>
+              <span
+                class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium border border-emerald-500/30">Socket.IO</span>
+              <span
+                class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm font-medium border border-indigo-500/30">PostgreSQL</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-white/60">February 2024</span>
+              <a href="/projects#chat-app" class="text-cyan-400 hover:text-cyan-300 font-medium group">
+                View Details →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/projects" class="text-cyan-400 hover:text-cyan-300 font-medium inline-flex items-center group">
+            View All Projects
+            <svg class="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-32 bg-gradient-to-b from-gray-900 to-black">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-20">
+          <div
+            class="slide-up stagger-1 inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-full mb-8">
+            <div class="w-2 h-2 rounded-full animate-pulse bg-cyan-400"></div>
+            <span class="text-sm font-medium">Services I Offer</span>
+          </div>
+          <h2
+            class="slide-up stagger-2 text-4xl sm:text-5xl lg:text-6xl sf-pro-display tracking-tight mb-8 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent font-light">
+            Full-stack development expertise
+          </h2>
+          <p class="slide-up stagger-3 text-lg text-white/60 max-w-2xl mx-auto">
+            Combining software development expertise with infrastructure
+            knowledge
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Web Development -->
+          <div
+            class="slide-up stagger-1 premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white sf-pro-display mb-4">
+              Web Development
+            </h3>
+            <p class="text-white/70 mb-6 leading-relaxed">
+              Full-stack JavaScript applications using React, Next.js, Golang, and
+              Node.js. Modern, responsive, and scalable solutions.
+            </p>
+            <ul class="text-sm text-white/60 space-y-2">
+              <li>• React & Next.js Applications</li>
+              <li>• REST API Development</li>
+              <li>• Database Design & Integration</li>
+              <li>• Performance Optimization</li>
+            </ul>
+          </div>
+
+          <!-- Mobile Development -->
+          <div
+            class="slide-up stagger-2 premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white sf-pro-display mb-4">
+              Mobile Development
+            </h3>
+            <p class="text-white/70 mb-6 leading-relaxed">
+              Cross-platform mobile applications using React Native. Native
+              performance with shared codebase efficiency.
+            </p>
+            <ul class="text-sm text-white/60 space-y-2">
+              <li>• React Native Apps</li>
+              <li>• iOS & Android Development</li>
+              <li>• Real-time Features</li>
+              <li>• App Store Deployment</li>
+            </ul>
+          </div>
+
+          <!-- Infrastructure Services -->
+          <div
+            class="slide-up stagger-3 premium-card glass-effect bg-white/5 border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2 4h.01M17 16h.01" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white sf-pro-display mb-4">
+              Infrastructure Services
+            </h3>
+            <p class="text-white/70 mb-6 leading-relaxed">
+              Network design, implementation, and optimization. Proven
+              experience in enterprise-level infrastructure.
+            </p>
+            <ul class="text-sm text-white/60 space-y-2">
+              <li>• Network Design & Setup</li>
+              <li>• Mikrotik & Ubiquiti Systems</li>
+              <li>• Troubleshooting & Optimization</li>
+              <li>• Structured Cabling</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="/services" class="glow-btn" style="--x: 147.5882568359375px; --y: 32.68756103515625px">
+            <span class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="arrow-right" class="lucide lucide-arrow-right w-[24px] h-[24px]">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </span>
+            View All Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-32 bg-gradient-to-b from-black to-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          class="slide-up stagger-1 inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-full mb-8">
+          <div class="w-2 h-2 rounded-full animate-pulse bg-cyan-400"></div>
+          <span class="text-sm font-medium">Let's Work Together</span>
+        </div>
+        <h2
+          class="slide-up stagger-2 text-4xl sm:text-5xl lg:text-6xl sf-pro-display tracking-tight mb-8 bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent font-light">
+          Ready to build something amazing?
+        </h2>
+        <p class="slide-up stagger-3 text-xl text-white/60 mb-12 max-w-2xl mx-auto">
+          Let's discuss how I can help you bring your project to life.
+        </p>
+        <div class="slide-up stagger-4 flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="glow-btn" style="--x: 147.5882568359375px; --y: 32.68756103515625px">
+            <span class="icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                data-lucide="arrow-right" class="lucide lucide-arrow-right w-[24px] h-[24px]">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </span>
+            Start a Project
+          </a>
+          <a href="mailto:rohimjoy70@gmail.com"
+            class="btn-secondary transition-all flex gap-2 font-medium rounded-full pt-4 pr-8 pb-4 pl-8 items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail"
+              class="lucide lucide-mail h-5 w-5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Send Email
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 border-t border-white/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-bold mb-4">Rohim Dev</h3>
+          <p class="text-white/60 mb-4 max-w-md">
+            Full-stack developer specializing in modern web and mobile applications.
+            Building digital solutions that drive business growth.
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://linkedin.com/in/tobangado" target="_blank" rel="noopener noreferrer"
+              class="text-white/60 hover:text-white transition-colors">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+            </a>
+            <a href="https://github.com/tobangado69" target="_blank" rel="noopener noreferrer"
+              class="text-white/60 hover:text-white transition-colors">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a href="mailto:rohimjoy70@gmail.com" class="text-white/60 hover:text-white transition-colors">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-white/60">
+            <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="work.html" class="hover:text-white transition-colors">Work</a></li>
+            <li><a href="projects.html" class="hover:text-white transition-colors">Projects</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-white/60">
+            <li>rohimjoy70@gmail.com</li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Get In Touch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/20 mt-8 pt-8 text-center text-white/60">
+        <p>&copy; 2025 Abdul Rohim. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="/assets/js/main.js"></script>
+
+  <!-- Beam Saber Glow Effect -->
+  <!-- Glow button effects moved to /assets/js/main.js -->
+</body>
+
+</html>

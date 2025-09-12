@@ -1,0 +1,35 @@
+---
+globs: *.html,*.css
+---
+
+# Styling Guidelines
+
+## Tailwind CSS Usage
+- Use Tailwind utility classes for all styling
+- Follow mobile-first approach (sm:, md:, lg:, xl:)
+- Use consistent spacing scale (p-4, m-6, etc.)
+- Utilize Tailwind's color palette
+
+## Component Patterns
+- Create reusable component classes in custom CSS
+- Use @apply directive for custom components
+- Keep component styles modular
+- Document custom utility classes
+
+## Responsive Design
+- Mobile: 320px+ (default)
+- Tablet: 768px+ (md:)
+- Desktop: 1024px+ (lg:)
+- Large: 1280px+ (xl:)
+
+## Color and Typography
+- Use consistent color scheme throughout
+- Maintain proper typography hierarchy
+- Ensure sufficient color contrast
+- Use system fonts for performance
+```
+
+description:
+globs:
+alwaysApply: true
+---

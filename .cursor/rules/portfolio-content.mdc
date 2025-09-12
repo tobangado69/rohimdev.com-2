@@ -1,0 +1,79 @@
+---
+description: "Portfolio content and professional information"
+---
+
+# Abdul Rohim Portfolio Content
+
+## Professional Background
+- **Current Role:** Staff Infrastructure at Varnion Technology Semesta (Jan 2025 - Present)
+- **Previous Role:** Provisioning Technician at PT Telkom Indonesia/IndiHome (Dec 2020 - Aug 2023)
+- **Education:** Hacktiv8 Bootcamp Graduate
+- **Total Experience:** 4+ years in telecommunications & infrastructure + software development
+- **Specialties:** Full-stack JavaScript Development, Network Infrastructure, Web & Mobile Development
+
+## Work Experience
+
+### Varnion Technology Semesta (Jan 2025 - Present)
+**Staff Infrastructure**
+- Network device installation, configuration, and maintenance (routers, switches, access points)
+- Network monitoring and troubleshooting using Mikrotik and Ubiquiti tools
+- Achieved 40% reduction in reported connectivity issues
+- Structured cabling and server rack setups in hotel environments
+- Cross-functional collaboration with NOC and support teams
+- Infrastructure project planning and deployment
+
+### PT Telkom Indonesia/IndiHome (Dec 2020 - Aug 2023)
+**Provisioning Technician**
+- IndiHome internet service installation and configuration
+- Fiber optic connections, modems, and set-top boxes setup
+- On-site troubleshooting using OTDR and OPM tools
+- Achieved 25% reduction in repeat visits through quality work
+- Customer education and support
+- Technical reporting and documentation
+
+## Technology Stack
+### Frontend
+- HTML5, CSS3, JavaScript (ES6+)
+- React, Next.js, TypeScript
+- Tailwind CSS
+
+### Mobile
+- React Native
+
+### Backend
+- Node.js, Express.js, Nest.js
+- Golang
+
+### Infrastructure & Networking
+- Mikrotik, Ubiquiti
+- Network configuration and troubleshooting
+- OTDR, OPM testing tools
+- Structured cabling systems
+
+### Databases
+- MongoDB, PostgreSQL, MySQL
+- Redis, Supabase
+
+### Tools & Deployment
+- GraphQL, REST API
+- Apollo Client/Server
+- Jest, Supertest
+- AWS, Firebase, Vercel
+- Figma
+
+## Featured Projects
+1. **Mobile Fb (April 2024)**
+   - React Native Facebook clone
+   - GraphQL + Apollo implementation
+   
+2. **Chat App (February 2024)**
+   - Real-time messaging app
+   - React + Node.js + Socket.IO + PostgreSQL
+
+## Contact Information
+- **Email:** rohimjoy70@gmail.com
+- **LinkedIn:** Abdul Rohim (https://linkedin.com/in/tobangado)
+- **GitHub:** Tobangado69 (https://github.com/tobangado69)
+
+alwaysApply: true
+---
