@@ -5,10 +5,10 @@
 // Console fallback for older browsers
 if (!window.console) {
   window.console = {
-    log: function() {},
-    error: function() {},
-    warn: function() {},
-    info: function() {}
+    log: function () {},
+    error: function () {},
+    warn: function () {},
+    info: function () {},
   };
 }
 
@@ -17,7 +17,7 @@ function safeExecute(fn, context) {
   try {
     return fn.call(context);
   } catch (error) {
-    console.error('Error executing function:', error);
+    console.error("Error executing function:", error);
     return null;
   }
 }
@@ -29,219 +29,229 @@ function detectBrowser() {
   const isSafari = /Safari/.test(userAgent) && !/Chrome/.test(userAgent);
   const isFirefox = /Firefox/.test(userAgent);
   const isChrome = /Chrome/.test(userAgent) && !/Edge/.test(userAgent);
-  
+
   return {
     isIE,
     isSafari,
     isFirefox,
     isChrome,
-    userAgent
+    userAgent,
   };
 }
 
 // Feature detection
 function detectFeatures() {
   return {
-    hasIntersectionObserver: 'IntersectionObserver' in window,
-    hasRequestAnimationFrame: 'requestAnimationFrame' in window,
-    hasFetch: 'fetch' in window,
-    hasLocalStorage: 'localStorage' in window,
-    hasSessionStorage: 'sessionStorage' in window,
+    hasIntersectionObserver: "IntersectionObserver" in window,
+    hasRequestAnimationFrame: "requestAnimationFrame" in window,
+    hasFetch: "fetch" in window,
+    hasLocalStorage: "localStorage" in window,
+    hasSessionStorage: "sessionStorage" in window,
     hasWebGL: !!window.WebGLRenderingContext,
-    hasWebP: (function() {
-      const canvas = document.createElement('canvas');
-      return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-    })()
+    hasWebP: (function () {
+      const canvas = document.createElement("canvas");
+      return canvas.toDataURL("image/webp").indexOf("data:image/webp") === 0;
+    })(),
   };
 }
 
 // Log browser info for debugging (only in development)
-if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-  console.log('Browser Info:', detectBrowser());
-  console.log('Feature Support:', detectFeatures());
-  
+if (
+  window.location.hostname === "localhost" ||
+  window.location.hostname === "127.0.0.1"
+) {
+  console.log("Browser Info:", detectBrowser());
+  console.log("Feature Support:", detectFeatures());
+
   // Add testing utilities to window for manual testing
   window.portfolioTesting = {
-    testMobileMenu: function() {
-      const btn = document.getElementById('mobile-menu-btn');
-      const menu = document.getElementById('mobile-menu');
+    testMobileMenu: function () {
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
       if (btn && menu) {
-        console.log('Testing mobile menu...');
+        console.log("Testing mobile menu...");
         btn.click();
         setTimeout(() => {
-          console.log('Mobile menu visible:', !menu.classList.contains('hidden'));
+          console.log(
+            "Mobile menu visible:",
+            !menu.classList.contains("hidden")
+          );
           btn.click();
-          console.log('Mobile menu closed');
+          console.log("Mobile menu closed");
         }, 1000);
       } else {
-        console.error('Mobile menu elements not found');
+        console.error("Mobile menu elements not found");
       }
     },
-    
-    testContactForm: function() {
-      const form = document.getElementById('contact-form');
+
+    testContactForm: function () {
+      const form = document.getElementById("contact-form");
       if (form) {
-        console.log('Testing contact form validation...');
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const messageInput = document.getElementById('message');
-        
+        console.log("Testing contact form validation...");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
+
         // Test empty validation
-        form.dispatchEvent(new Event('submit'));
-        console.log('Empty form validation test completed');
-        
+        form.dispatchEvent(new Event("submit"));
+        console.log("Empty form validation test completed");
+
         // Test with valid data
-        if (nameInput) nameInput.value = 'Test User';
-        if (emailInput) emailInput.value = 'test@example.com';
-        if (messageInput) messageInput.value = 'Test message';
-        
-        console.log('Form filled with test data');
+        if (nameInput) nameInput.value = "Test User";
+        if (emailInput) emailInput.value = "test@example.com";
+        if (messageInput) messageInput.value = "Test message";
+
+        console.log("Form filled with test data");
       } else {
-        console.error('Contact form not found');
+        console.error("Contact form not found");
       }
     },
-    
-    testNavigation: function() {
-      const navLinks = document.querySelectorAll('nav a[href]');
-      console.log('Found navigation links:', navLinks.length);
+
+    testNavigation: function () {
+      const navLinks = document.querySelectorAll("nav a[href]");
+      console.log("Found navigation links:", navLinks.length);
       navLinks.forEach((link, index) => {
         console.log(`${index + 1}. ${link.textContent.trim()} -> ${link.href}`);
       });
     },
-    
-    testResponsiveDesign: function() {
+
+    testResponsiveDesign: function () {
       const viewport = {
         width: window.innerWidth,
         height: window.innerHeight,
-        devicePixelRatio: window.devicePixelRatio
+        devicePixelRatio: window.devicePixelRatio,
       };
-      
-      console.log('Current viewport:', viewport);
-      
+
+      console.log("Current viewport:", viewport);
+
       // Test different breakpoints
       const breakpoints = {
         mobile: 640,
         tablet: 768,
         desktop: 1024,
-        large: 1280
+        large: 1280,
       };
-      
-      const currentBreakpoint = Object.keys(breakpoints).find(
-        bp => viewport.width >= breakpoints[bp]
-      ) || 'mobile';
-      
-      console.log('Current breakpoint:', currentBreakpoint);
-      
+
+      const currentBreakpoint =
+        Object.keys(breakpoints).find(
+          (bp) => viewport.width >= breakpoints[bp]
+        ) || "mobile";
+
+      console.log("Current breakpoint:", currentBreakpoint);
+
       // Check if mobile menu should be visible
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+
       if (viewport.width < 768) {
-        console.log('Mobile layout detected - mobile menu should be available');
+        console.log("Mobile layout detected - mobile menu should be available");
         if (mobileMenuBtn) {
-          console.log('Mobile menu button found:', mobileMenuBtn.offsetWidth + 'x' + mobileMenuBtn.offsetHeight);
+          console.log(
+            "Mobile menu button found:",
+            mobileMenuBtn.offsetWidth + "x" + mobileMenuBtn.offsetHeight
+          );
         }
       } else {
-        console.log('Desktop layout detected - mobile menu should be hidden');
+        console.log("Desktop layout detected - mobile menu should be hidden");
       }
     },
-    
-    testFormValidation: function() {
-      const form = document.getElementById('contact-form');
+
+    testFormValidation: function () {
+      const form = document.getElementById("contact-form");
       if (!form) {
-        console.error('Contact form not found');
+        console.error("Contact form not found");
         return;
       }
-      
-      console.log('Testing form validation...');
-      
+
+      console.log("Testing form validation...");
+
       // Test required field validation
-      const requiredFields = ['name', 'email', 'message'];
-      requiredFields.forEach(fieldName => {
+      const requiredFields = ["name", "email", "message"];
+      requiredFields.forEach((fieldName) => {
         const field = document.getElementById(fieldName);
         if (field) {
-          field.value = '';
-          field.dispatchEvent(new Event('blur'));
+          field.value = "";
+          field.dispatchEvent(new Event("blur"));
           console.log(`${fieldName} validation test completed`);
         }
       });
-      
+
       // Test email validation
-      const emailField = document.getElementById('email');
+      const emailField = document.getElementById("email");
       if (emailField) {
         const testEmails = [
-          'invalid-email',
-          'test@',
-          '@example.com',
-          'test@example.com'
+          "invalid-email",
+          "test@",
+          "@example.com",
+          "test@example.com",
         ];
-        
-        testEmails.forEach(email => {
+
+        testEmails.forEach((email) => {
           emailField.value = email;
-          emailField.dispatchEvent(new Event('blur'));
+          emailField.dispatchEvent(new Event("blur"));
           console.log(`Email validation test for "${email}" completed`);
         });
       }
     },
-    
-    runAllTests: function() {
-      console.log('Running all portfolio tests...');
+
+    runAllTests: function () {
+      console.log("Running all portfolio tests...");
       this.testMobileMenu();
       this.testContactForm();
       this.testNavigation();
       this.testResponsiveDesign();
       this.testFormValidation();
-      console.log('All tests completed. Check console for results.');
-    }
+      console.log("All tests completed. Check console for results.");
+    },
   };
-  
-  console.log('Testing utilities available at window.portfolioTesting');
+
+  console.log("Testing utilities available at window.portfolioTesting");
 }
 
 if (!window.requestAnimationFrame) {
-  window.requestAnimationFrame = function(callback) {
+  window.requestAnimationFrame = function (callback) {
     return setTimeout(callback, 1000 / 60);
   };
 }
 
 if (!window.IntersectionObserver) {
   // Simple fallback for IntersectionObserver
-  window.IntersectionObserver = function(callback) {
+  window.IntersectionObserver = function (callback) {
     return {
-      observe: function() {},
-      unobserve: function() {},
-      disconnect: function() {}
+      observe: function () {},
+      unobserve: function () {},
+      disconnect: function () {},
     };
   };
 }
 
 // Fetch polyfill for older browsers
 if (!window.fetch) {
-  window.fetch = function(url, options) {
-    return new Promise(function(resolve, reject) {
+  window.fetch = function (url, options) {
+    return new Promise(function (resolve, reject) {
       var xhr = new XMLHttpRequest();
-      xhr.open(options.method || 'GET', url);
-      
+      xhr.open(options.method || "GET", url);
+
       if (options.headers) {
-        Object.keys(options.headers).forEach(function(key) {
+        Object.keys(options.headers).forEach(function (key) {
           xhr.setRequestHeader(key, options.headers[key]);
         });
       }
-      
-      xhr.onload = function() {
+
+      xhr.onload = function () {
         resolve({
           ok: xhr.status >= 200 && xhr.status < 300,
           status: xhr.status,
-          json: function() {
+          json: function () {
             return Promise.resolve(JSON.parse(xhr.responseText));
-          }
+          },
         });
       };
-      
-      xhr.onerror = function() {
-        reject(new Error('Network error'));
+
+      xhr.onerror = function () {
+        reject(new Error("Network error"));
       };
-      
+
       xhr.send(options.body);
     });
   };
@@ -460,46 +470,57 @@ function initPerformanceMonitoring() {
       const perfData = performance.getEntriesByType("navigation")[0];
       const browserInfo = detectBrowser();
       const features = detectFeatures();
-      
+
       // Performance metrics
       const metrics = {
         pageLoadTime: perfData.loadEventEnd - perfData.loadEventStart,
-        domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-        firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 'N/A',
-        firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 'N/A',
+        domContentLoaded:
+          perfData.domContentLoadedEventEnd -
+          perfData.domContentLoadedEventStart,
+        firstPaint:
+          performance.getEntriesByName("first-paint")[0]?.startTime || "N/A",
+        firstContentfulPaint:
+          performance.getEntriesByName("first-contentful-paint")[0]
+            ?.startTime || "N/A",
         browser: browserInfo,
         features: features,
         viewport: {
           width: window.innerWidth,
           height: window.innerHeight,
-          devicePixelRatio: window.devicePixelRatio
-        }
+          devicePixelRatio: window.devicePixelRatio,
+        },
       };
-      
-      console.log('Performance Metrics:', metrics);
-      
+
+      console.log("Performance Metrics:", metrics);
+
       // Store metrics for debugging
       if (features.hasLocalStorage) {
         try {
-          localStorage.setItem('portfolio_performance', JSON.stringify(metrics));
+          localStorage.setItem(
+            "portfolio_performance",
+            JSON.stringify(metrics)
+          );
         } catch (e) {
-          console.warn('Could not store performance metrics:', e);
+          console.warn("Could not store performance metrics:", e);
         }
       }
-      
+
       // Check for potential issues
       if (metrics.pageLoadTime > 3000) {
-        console.warn('Slow page load detected:', metrics.pageLoadTime + 'ms');
+        console.warn("Slow page load detected:", metrics.pageLoadTime + "ms");
       }
-      
+
       if (browserInfo.isIE) {
-        console.warn('Internet Explorer detected - some features may not work optimally');
+        console.warn(
+          "Internet Explorer detected - some features may not work optimally"
+        );
       }
-      
+
       if (!features.hasIntersectionObserver) {
-        console.warn('IntersectionObserver not supported - animations may be limited');
+        console.warn(
+          "IntersectionObserver not supported - animations may be limited"
+        );
       }
-      
     }, 1000);
   });
 }
