@@ -818,7 +818,7 @@
                     </p>
                 </div>
 
-                <div class="grid lg:grid-cols-3 gap-8">
+                <div class="grid lg:grid-cols-3 gap-8 overflow-visible">
                     <!-- Starter Package -->
                     <div class="premium-card glass-effect bg-white/5 border border-white/10 rounded-3xl p-8 relative">
                         <div class="text-center mb-8">
@@ -879,11 +879,13 @@
 
                     <!-- Professional Package (Highlighted) -->
                     <div
-                        class="premium-card glass-effect bg-gray-800/50 border-4 border-cyan-400 rounded-3xl p-8 relative pricing-highlight">
-                        <div class="absolute -top-1 left-1/2 transform -translate-x-1/2 z-10">
+                        class="premium-card glass-effect bg-gray-800/50 border-4 border-cyan-400 rounded-3xl p-8 relative">
+
+                        <!-- Most Popular Badge -->
+                        <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 z-30 pointer-events-none">
                             <span
-                                class="pricing-badge bg-cyan-400 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                                Most Popular
+                                class="inline-flex items-center px-4 py-1.5 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs font-bold rounded-full shadow-lg border border-cyan-300/30">
+                                ⭐ MOST POPULAR
                             </span>
                         </div>
 
@@ -1013,7 +1015,7 @@
                     I'll guide you through every step of the development process.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/contact" class="glow-btn">
+                    <a href="/contact#get-in-touch" class="glow-btn">
                         <span class="icon-box">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
